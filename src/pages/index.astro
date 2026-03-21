@@ -33,7 +33,7 @@ const schema = {
         />
       </div>
       <div class="hero-text-col">
-        <h1 class="hero-title">STEPHAN<br>SCHMIED</h1>
+        <h1 class="hero-title">STEPHAN SCHMIED</h1>
         <p class="hero-sub1">Hair &amp; Make-up Artist · Berlin</p>
         <p class="hero-sub2">Coaching · Bridal · Editorial</p>
         <div class="hero-buttons">
@@ -210,13 +210,14 @@ const schema = {
   }
   .hero-title {
     font-family: var(--font-signature);
-    font-size: 72px;
+    font-size: 56px;
     font-weight: 400;
     line-height: 1.05;
     letter-spacing: 0.03em;
     margin-bottom: 1.25rem;
     color: #2C2825;
     text-transform: uppercase;
+    white-space: nowrap;
   }
   .hero-sub1 {
     font-size: 0.88rem;
@@ -305,6 +306,7 @@ const schema = {
     }
     .hero-title {
       font-size: 40px;
+      white-space: normal;
     }
     .hero-buttons {
       flex-direction: column;
