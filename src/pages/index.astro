@@ -23,7 +23,7 @@ const schema = {
   <section class="hero">
     <div class="hero-bg">
       <img
-        src="https://placehold.co/1920x1080/F5F0EB/C9A96E?text=Hero+Bild"
+        src="https://placehold.co/1920x1080/F5F0EB/F5F0EB"
         alt="Stephan Schmied bei der Arbeit"
         width="1920" height="1080"
         loading="eager"
@@ -32,10 +32,9 @@ const schema = {
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content container">
-      <p class="hero-label">Hair &amp; Make-up Artist</p>
       <h1 class="hero-title">Stephan<br>Schmied</h1>
       <p class="hero-sub">Hair &amp; Make-up Artist · Berlin · Since 1987</p>
-      <a href="/portfolio" class="btn btn-gold">Arbeiten entdecken</a>
+      <a href="/portfolio" class="btn btn-anthracite">Arbeiten entdecken</a>
     </div>
     <div class="hero-scroll-hint" aria-hidden="true">
       <span></span>
@@ -225,10 +224,10 @@ const schema = {
   }
   .hero-title {
     font-family: var(--font-signature);
-    font-size: clamp(4rem, 12vw, 10rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 400;
-    line-height: 0.95;
-    letter-spacing: 0.05em;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
     margin-bottom: 1.5rem;
     color: #2C2825;
     text-transform: none;
@@ -240,6 +239,16 @@ const schema = {
     color: rgba(44,40,37,0.6);
     margin-bottom: 3rem;
     max-width: none;
+  }
+  .btn-anthracite {
+    background: #2C2825;
+    color: #F5F0EB;
+    border-color: #2C2825;
+  }
+  .btn-anthracite:hover {
+    background: #A89B8C;
+    border-color: #A89B8C;
+    color: #F5F0EB;
   }
   .hero-scroll-hint {
     position: absolute;
