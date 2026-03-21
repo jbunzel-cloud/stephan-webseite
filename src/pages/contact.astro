@@ -108,11 +108,25 @@ import Layout from '../layouts/Layout.astro';
           <span class="label">Kontakt</span>
           <h2 style="font-size:2rem;margin-bottom:var(--sp-md)">Direkt erreichen</h2>
 
+          <div class="contact-card">
+            <p class="contact-name">Stephan Schmied</p>
+            <p class="contact-job">Hair &amp; Make-up Artist</p>
+            <p class="contact-addr">Badenssche Straße 14<br>10715 Berlin</p>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">☎</div>
+            <div>
+              <p style="font-size:0.75rem;color:var(--color-secondary);margin-bottom:0.15rem;max-width:none">Telefon / WhatsApp</p>
+              <a href="tel:+491773238988" class="contact-link">+49 177 323 8988</a>
+            </div>
+          </div>
+
           <div class="contact-detail">
             <div class="contact-detail-icon">@</div>
             <div>
               <p style="font-size:0.75rem;color:var(--color-secondary);margin-bottom:0.15rem;max-width:none">E-Mail</p>
-              <a href="mailto:info@stephanschmied.com" class="contact-link">info@stephanschmied.com</a>
+              <a href="mailto:stephan@stephanschmied.com" class="contact-link">stephan@stephanschmied.com</a>
             </div>
           </div>
 
@@ -130,33 +144,12 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
-          <div class="contact-detail">
-            <div class="contact-detail-icon">📍</div>
-            <div>
-              <p style="font-size:0.75rem;color:var(--color-secondary);margin-bottom:0.15rem;max-width:none">Standort</p>
-              <p class="contact-link" style="cursor:default">Berlin, Deutschland</p>
-            </div>
-          </div>
-
-          <div class="map-placeholder">
-            <!-- Google Maps Embed hier einfügen -->
-            📍 Berlin, Deutschland
-          </div>
-
           <div class="response-note">
             <span class="response-dot"></span>
-            Antwort innerhalb von 24 Stunden
+            Ich antworte in der Regel innerhalb von 24 Stunden.
           </div>
 
-          <!-- Calendly -->
-          <div class="calendly-placeholder">
-            <p><strong>Oder buche direkt einen Termin:</strong></p>
-            <p style="margin-top:0.5rem;font-size:0.82rem">
-              <!-- Calendly Embed hier einfügen -->
-              Calendly-Widget hier einfügen:<br>
-              <code style="font-size:0.75rem;color:var(--color-gold)">&lt;div class="calendly-inline-widget" data-url="https://calendly.com/DEIN_ACCOUNT"&gt;&lt;/div&gt;</code>
-            </p>
-          </div>
+          <p class="whatsapp-note">Am schnellsten erreichst du mich per <a href="https://wa.me/491773238988" target="_blank" rel="noopener noreferrer" class="contact-link">WhatsApp</a>.</p>
         </div>
 
       </div>
@@ -197,6 +190,39 @@ import Layout from '../layouts/Layout.astro';
   @keyframes pulse {
     0%, 100% { opacity: 1; }
     50%       { opacity: 0.4; }
+  }
+
+  .contact-card {
+    border: 1px solid var(--color-border);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    background: #fafaf8;
+  }
+  .contact-name {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 0.15rem;
+    max-width: none;
+  }
+  .contact-job {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 0.75rem;
+    max-width: none;
+  }
+  .contact-addr {
+    font-size: 0.88rem;
+    color: var(--color-secondary);
+    line-height: 1.6;
+    max-width: none;
+  }
+  .whatsapp-note {
+    font-size: 0.85rem;
+    color: var(--color-secondary);
+    margin-top: 0.5rem;
+    max-width: none;
   }
 
   @media (max-width: 768px) {
