@@ -32,6 +32,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Create Cloudflare Pages project (if not exists)
+        run: npx wrangler pages project create stephan-webseite --production-branch=main || true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: e69db7f45ad7a2375a38a35446cffbc9
+
       - name: Deploy to Cloudflare Pages
         run: npx wrangler pages deploy dist --project-name=stephan-webseite --commit-dirty=true
         env:
