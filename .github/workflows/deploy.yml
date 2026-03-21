@@ -36,5 +36,5 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          accountId: e69db7f45ad7a2375a38a35446cffbc9
           command: pages deploy dist --project-name=stephan-webseite --commit-dirty=true
