@@ -16,25 +16,31 @@ const schema = {
 
 <Layout
   title="Stephan Schmied – Hair & Make-up Artist Berlin"
-  description="Hair & Make-up Artist in Berlin seit 1987. Spezialist für Bridal, Editorial, Events und Beauty Workshops. Brand Ambassador Max Factor 2007–2019."
+  description="Hair & Make-up Artist in Berlin seit 1987. Spezialist für Bridal, Editorial, Events und Make-up Coaching. Brand Ambassador Max Factor 2007–2019."
   schemaOrg={schema}
 >
   <!-- ═══ HERO ═══ -->
   <section class="hero">
-    <div class="hero-bg">
-      <img
-        src="https://placehold.co/1920x1080/F5F0EB/F5F0EB"
-        alt="Stephan Schmied bei der Arbeit"
-        width="1920" height="1080"
-        loading="eager"
-        fetchpriority="high"
-      />
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content container">
-      <h1 class="hero-title">Stephan<br>Schmied</h1>
-      <p class="hero-sub">Hair &amp; Make-up Artist · Berlin · Since 1987</p>
-      <a href="/portfolio" class="btn btn-anthracite">Arbeiten entdecken</a>
+    <div class="hero-inner container">
+      <div class="hero-photo-col">
+        <img
+          src="/images/stephan-portrait.jpg"
+          alt="Stephan Schmied – Hair & Make-up Artist"
+          width="800" height="1000"
+          loading="eager"
+          fetchpriority="high"
+          class="hero-portrait"
+        />
+      </div>
+      <div class="hero-text-col">
+        <h1 class="hero-title">Stephan<br>Schmied</h1>
+        <p class="hero-sub1">Hair &amp; Make-up Artist · Berlin</p>
+        <p class="hero-sub2">Coaching · Bridal · Editorial</p>
+        <div class="hero-buttons">
+          <a href="/contact" class="btn btn-anthracite">Coaching buchen</a>
+          <a href="/portfolio" class="btn btn-hero-outline">Portfolio</a>
+        </div>
+      </div>
     </div>
     <div class="hero-scroll-hint" aria-hidden="true">
       <span></span>
@@ -74,14 +80,15 @@ const schema = {
           <span class="celeb-name">Iris Berben</span>
           <span class="celeb-name">Gwyneth Paltrow</span>
           <span class="celeb-name">Franziska Knuppe</span>
+          <span class="celeb-name">Toni Garn</span>
+          <span class="celeb-name">Eva Padberg</span>
           <span class="celeb-name">Liv Tyler</span>
           <span class="celeb-name">Herbert Grönemeyer</span>
-          <span class="celeb-name">Eva Padberg</span>
           <span class="celeb-name">Katja Riemann</span>
         </div>
         <div class="celeb-text">
           <p>In fast vier Jahrzehnten hatte ich das Privileg, einige der bekanntesten Gesichter der Welt zu stylen – auf Laufstegen, für Kampagnen und auf den Covern internationaler Magazine.</p>
-          <p class="mt-sm">Und jetzt? Jetzt bringe ich genau diese Erfahrung zu dir. Denn du verdienst den gleichen Standard – ob für deine Hochzeit, dein Event oder deinen Beauty Workshop. Echte Hände. Echtes Handwerk. Kein Filter.</p>
+          <p class="mt-sm">Und jetzt? Jetzt bringe ich genau diese Erfahrung zu dir. Denn du verdienst den gleichen Standard – ob für deine Hochzeit, dein Event oder dein Make-up Coaching. Echte Hände. Echtes Handwerk. Kein Filter.</p>
         </div>
       </div>
     </div>
@@ -118,7 +125,16 @@ const schema = {
         <h2 class="section-title">Services</h2>
       </div>
       <div class="services-grid mt-md">
-        <a href="/services#bridal" class="service-card fade-in">
+        <a href="/masterclasses" class="service-card fade-in">
+          <div class="service-card-img-wrap">
+            <img src="https://placehold.co/600x400/C9A96E/1A1A1A?text=Make-up+Coaching" alt="Make-up Coaching" width="600" height="400" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <h3>Make-up Coaching</h3>
+            <p>Du willst die Techniken lernen, mit denen ich für Vogue und Elle gearbeitet habe? In meinen Coachings zeige ich dir Schritt für Schritt, wie Profis arbeiten – individuell, praxisnah und mit Produkten, die du zu Hause oder bei DM findest.</p>
+          </div>
+        </a>
+        <a href="/services#bridal" class="service-card fade-in delay-1">
           <div class="service-card-img-wrap">
             <img src="https://placehold.co/600x400/1A1A1A/FAFAF8?text=Bridal" alt="Bridal Make-up" width="600" height="400" loading="lazy" />
           </div>
@@ -127,22 +143,13 @@ const schema = {
             <p>Dein perfekter Look für den wichtigsten Tag. Vom Probetermin bis zum letzten Tanz.</p>
           </div>
         </a>
-        <a href="/services#editorial" class="service-card fade-in delay-1">
+        <a href="/services#editorial" class="service-card fade-in delay-2">
           <div class="service-card-img-wrap">
             <img src="https://placehold.co/600x400/4A4A4A/FAFAF8?text=Editorial" alt="Editorial Make-up" width="600" height="400" loading="lazy" />
           </div>
           <div class="service-card-body">
-            <h3>Events &amp; Editorial</h3>
+            <h3>Editorial &amp; Events</h3>
             <p>Fashion, Beauty, Celebrity. Für Shootings, Kampagnen und Red Carpet.</p>
-          </div>
-        </a>
-        <a href="/masterclasses" class="service-card fade-in delay-2">
-          <div class="service-card-img-wrap">
-            <img src="https://placehold.co/600x400/C9A96E/1A1A1A?text=Beauty+Workshops" alt="Beauty Workshops" width="600" height="400" loading="lazy" />
-          </div>
-          <div class="service-card-body">
-            <h3>Beauty Workshops</h3>
-            <p>Du willst die Techniken lernen, mit denen ich Kate Moss und Iris Berben gestylt habe? In meinen Beauty Workshops zeige ich dir Schritt für Schritt, wie Profis arbeiten – mit Produkten, die du zu Hause oder bei DM findest.</p>
           </div>
         </a>
       </div>
@@ -184,61 +191,65 @@ const schema = {
   /* ─── Hero ─── */
   .hero {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    min-height: 100vh;
     background: #F5F0EB;
     color: #2C2825;
+    display: flex;
+    align-items: stretch;
   }
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px; /* nav height */
   }
-  .hero-bg img {
-    width: 100%; height: 100%;
+  .hero-photo-col {
+    height: 100vh;
+    overflow: hidden;
+    margin-left: calc(-1 * var(--container-padding, 2rem));
+  }
+  .hero-portrait {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: top center;
+    display: block;
   }
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(245,240,235,0.3) 0%, rgba(245,240,235,0.15) 60%, rgba(245,240,235,0.4) 100%);
-    z-index: 1;
-  }
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-  }
-  .hero-label {
-    font-size: 0.75rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--color-gold);
-    margin-bottom: 1.5rem;
-    max-width: none;
+  .hero-text-col {
+    padding: 3rem 3rem 3rem 4rem;
   }
   .hero-title {
     font-family: var(--font-signature);
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: 64px;
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1.05;
     letter-spacing: 0.02em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     color: #2C2825;
     text-transform: none;
   }
-  .hero-sub {
-    font-size: 0.9rem;
+  .hero-sub1 {
+    font-size: 0.88rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(44,40,37,0.6);
-    margin-bottom: 3rem;
+    color: rgba(44,40,37,0.65);
+    margin-bottom: 0.4rem;
     max-width: none;
+  }
+  .hero-sub2 {
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(44,40,37,0.45);
+    margin-bottom: 2.5rem;
+    max-width: none;
+  }
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
   .btn-anthracite {
     background: #2C2825;
@@ -248,6 +259,21 @@ const schema = {
   .btn-anthracite:hover {
     background: #A89B8C;
     border-color: #A89B8C;
+    color: #F5F0EB;
+  }
+  .btn-hero-outline {
+    background: transparent;
+    color: #2C2825;
+    border: 1px solid #2C2825;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.75rem 2rem;
+    transition: background var(--transition), color var(--transition);
+  }
+  .btn-hero-outline:hover {
+    background: #2C2825;
     color: #F5F0EB;
   }
   .hero-scroll-hint {
@@ -270,6 +296,29 @@ const schema = {
     50%  { transform: scaleY(1); transform-origin: top; }
     51%  { transform: scaleY(1); transform-origin: bottom; }
     100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+  @media (max-width: 900px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      padding-top: 70px;
+    }
+    .hero-photo-col {
+      height: 60vw;
+      min-height: 280px;
+      max-height: 420px;
+      margin-left: 0;
+    }
+    .hero-text-col {
+      padding: 2rem 1.5rem 3rem;
+    }
+    .hero-title {
+      font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+    .hero-buttons {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   /* ─── Celebrity Intro ─── */
