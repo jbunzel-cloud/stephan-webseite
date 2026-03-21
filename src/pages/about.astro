@@ -1,0 +1,198 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const milestones = [
+  { year: 'Frühe 1980er', text: 'Friseurausbildung in Wien, erste Fashion Shows und Shootings' },
+  { year: '1987',         text: 'Start als freiberuflicher Hair & Make-up Artist' },
+  { year: '1990er',       text: 'Internationale Fashion Weeks. Kate Moss, Gwyneth Paltrow, Liv Tyler, Iris Berben, Franziska Knuppe, Toni Garn, Eva Padberg und viele mehr' },
+  { year: '1998',         text: 'Umzug nach Berlin' },
+  { year: '2007',         text: 'Brand Ambassador Max Factor für Deutschland, Österreich und die Schweiz' },
+  { year: '2019',         text: 'Neue Freiheit: Editorial, Bridal, Beauty Workshops' },
+  { year: 'Heute',        text: 'Von den Covern der Welt zu deinem Moment' },
+];
+---
+
+<Layout
+  title="Über mich – Stephan Schmied Hair & Make-up Artist Berlin"
+  description="Fast 40 Jahre Leidenschaft für Schönheit. Friseurausbildung Wien, Brand Ambassador Max Factor 2007–2019, heute in Berlin für Bridal, Editorial und Beauty Workshops."
+>
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">Meine Geschichte</span>
+      <h1>Über mich</h1>
+      <p>Fast 40 Jahre Leidenschaft für Schönheit</p>
+    </div>
+  </section>
+
+  <!-- ─── Story ─── -->
+  <section class="section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="fade-in">
+          <img
+            src="/images/stephan-portrait.jpg"
+            alt="Stephan Schmied – Hair & Make-up Artist Berlin"
+            width="600" height="800"
+            loading="lazy"
+            style="width:100%;object-fit:cover;object-position:top"
+          />
+        </div>
+        <div class="fade-in delay-1">
+          <span class="label">My Story</span>
+          <h2 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:var(--sp-sm)">Echte Hände.<br>Echtes Handwerk.</h2>
+          <div class="divider"></div>
+          <div class="story-text">
+            <p>Alles begann in einem Wiener Friseursalon, Anfang der Achtziger. Ich war Lehrling, und eine Kundin fragte, ob ich auch Make-up könne. Ich konnte nicht. Also lernte ich es. Und hörte nicht mehr auf.</p>
+            <p>Aus dem Lehrling wurde ein Hair & Make-up Artist, der auf den Fashion Weeks dieser Welt arbeitete. Ich durfte Gesichter stylen, die Millionen Menschen kennen: Kate Moss, Gwyneth Paltrow, Liv Tyler, Iris Berben, Herbert Grönemeyer, Franziska Knuppe, Toni Garn, Eva Padberg, Katja Riemann, Esther Schweins, Sabrina Setlur – und viele andere, die mir über die Jahre vertraut haben. Zwölf Jahre lang war ich Brand Ambassador von Max Factor in Deutschland, Österreich und der Schweiz.</p>
+            <p>Seit 1998 ist Berlin mein Zuhause. Die Stadt hat meine Arbeit geprägt: direkt, kreativ, ohne Allüren. Ich habe für Gala, GQ, Interview Magazine und ZOO Magazine gearbeitet, für Douglas und mit Fotografen wie Ellen von Unwerth, Jim Rakete und Heji Shin.</p>
+            <p>Aber das Wichtigste habe ich nicht auf dem Laufsteg gelernt, sondern daneben: Jedes Gesicht hat seine eigene Schönheit. Meine Aufgabe ist nicht, sie zu überdecken – sondern sie sichtbar zu machen.</p>
+            <p>Heute arbeite ich für Menschen, die einen Moment haben, der zählt. Hochzeiten, Events, Shootings – oder Beauty Workshops, in denen ich weitergebe, was mich fast vier Jahrzehnte gelehrt haben. Was ich mitbringe, kann kein Filter: Erfahrung, Ruhe und zwei Hände, die wissen, was sie tun.</p>
+          </div>
+          <div class="about-credentials mt-md">
+            <div class="credential">
+              <span class="credential-num">40+</span>
+              <span class="credential-label">Jahre Erfahrung</span>
+            </div>
+            <div class="credential">
+              <span class="credential-num">12</span>
+              <span class="credential-label">Jahre Max Factor</span>
+            </div>
+            <div class="credential">
+              <span class="credential-num">∞</span>
+              <span class="credential-label">Leidenschaft</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Timeline ─── -->
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <div class="fade-in text-center">
+        <span class="label">Meilensteine</span>
+        <h2 class="section-title">Der Weg</h2>
+      </div>
+      <div style="max-width:600px;margin:0 auto">
+        <div class="timeline mt-md">
+          {milestones.map((m, i) => (
+            <div class:list={['timeline-item fade-in', `delay-${Math.min(i, 3)}`]}>
+              <p class="timeline-year">{m.year}</p>
+              <p class="timeline-text">{m.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Clients ─── -->
+  <section class="logo-bar fade-in">
+    <div class="container">
+      <span class="label" style="display:block;text-align:center">Kunden &amp; Kooperationen</span>
+      <div class="logo-grid">
+        <span class="logo-item">Max Factor</span>
+        <span class="logo-item">Douglas</span>
+        <span class="logo-item">Gala</span>
+        <span class="logo-item">GQ</span>
+        <span class="logo-item">Interview Magazine</span>
+        <span class="logo-item">ZOO Magazine</span>
+        <span class="logo-item">Helmut Lang</span>
+      </div>
+      <p class="photographers-note">Fotografen: Ellen von Unwerth · Jim Rakete · Gregor Hohenberg · Heji Shin · Esther Haase · Joachim Baldauf</p>
+    </div>
+  </section>
+
+  <!-- ─── Philosophie ─── -->
+  <section class="philosophy-section">
+    <div class="container">
+      <div class="philosophy-inner fade-in">
+        <div class="philosophy-quote">
+          "Meine größte Stärke liegt darin,<br>
+          die individuellen Vorzüge jedes<br>
+          Menschen hervorzuheben und zu betonen."
+        </div>
+        <p class="philosophy-author">— Stephan Schmied</p>
+        <a href="/contact" class="btn btn-gold mt-md">Zusammenarbeiten</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: var(--sp-lg);
+    align-items: start;
+  }
+  .story-text p {
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    max-width: none;
+  }
+  .story-text em { color: var(--color-text); font-style: italic; }
+
+  .about-credentials {
+    display: flex;
+    gap: 2.5rem;
+  }
+  .credential {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .credential-num {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-gold);
+    line-height: 1;
+  }
+  .credential-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+  }
+
+  .photographers-note {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.78rem;
+    color: var(--color-secondary);
+    letter-spacing: 0.05em;
+    max-width: none;
+  }
+
+  .philosophy-section {
+    background: var(--color-dark);
+    padding: var(--sp-xl) var(--sp-md);
+    text-align: center;
+  }
+  .philosophy-inner { max-width: 780px; margin: 0 auto; }
+  .philosophy-quote {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 3.5vw, 3rem);
+    font-style: normal;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+  .philosophy-author {
+    font-family: var(--font-signature);
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    color: var(--color-gold);
+    max-width: none;
+  }
+
+  @media (max-width: 768px) {
+    .story-grid { grid-template-columns: 1fr; }
+    .about-credentials { justify-content: center; }
+  }
+</style>

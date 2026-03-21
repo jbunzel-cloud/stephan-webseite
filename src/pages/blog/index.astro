@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { blogPosts } from '../../data/blog';
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('de-DE', {
+    day: 'numeric', month: 'long', year: 'numeric'
+  });
+}
+---
+
+<Layout
+  title="Blog – Stephan Schmied Hair & Make-up Artist Berlin"
+  description="Beauty-Tipps, Make-up-Trends, Behind the Scenes und persönliche Stories aus fast 40 Jahren als Hair & Make-up Artist in Berlin."
+>
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">Tipps &amp; Insights</span>
+      <h1>Blog</h1>
+      <p>Tipps, Trends und Behind the Scenes</p>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+        {blogPosts.map((post, i) => (
+          <article class:list={['blog-card fade-in', i > 0 ? `delay-${Math.min(i, 3)}` : '']}>
+            <a href={`/blog/${post.slug}`}>
+              <div class="blog-card-img-wrap">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  width="800" height="500"
+                  loading="lazy"
+                  decoding="async"
+                  class="blog-card-img"
+                />
+              </div>
+              <div class="blog-card-body">
+                <span class="blog-tag">{post.category}</span>
+                <h2>{post.title}</h2>
+                <p class="blog-meta">{formatDate(post.date)} · {post.readTime} Min. Lesezeit</p>
+                <p class="blog-teaser">{post.teaser}</p>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="cta-section">
+    <h2>Kein Artikel verpassen</h2>
+    <p style="color:rgba(255,255,255,0.6);margin-bottom:var(--sp-md);max-width:44ch;margin-left:auto;margin-right:auto">Abonniere den Newsletter und erfahre als Erstes von neuen Artikeln, Masterclass-Terminen und Angeboten.</p>
+    <a href="/masterclasses#newsletter" class="btn btn-gold">Newsletter abonnieren</a>
+  </section>
+</Layout>

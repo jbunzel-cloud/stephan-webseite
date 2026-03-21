@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Seite nicht gefunden – Stephan Schmied"
+  description="Diese Seite existiert nicht. Zurück zur Startseite von Stephan Schmied, Hair & Make-up Artist Berlin."
+>
+  <div class="not-found">
+    <div class="not-found-num" aria-hidden="true">404</div>
+    <span class="label" style="display:block;margin-bottom:0.5rem">Nicht gefunden</span>
+    <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:1rem">Diese Seite existiert nicht</h1>
+    <p style="color:var(--color-secondary);margin-bottom:var(--sp-md)">
+      Vielleicht wurde die Seite verschoben oder du hast dich vertippt.
+    </p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center">
+      <a href="/" class="btn btn-gold">Zur Startseite</a>
+      <a href="/portfolio" class="btn btn-outline">Arbeiten entdecken</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .not-found-num {
+    background: linear-gradient(135deg, var(--color-border) 0%, var(--color-bg) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

@@ -1,0 +1,375 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Stephan Schmied",
+  "jobTitle": "Hair & Make-up Artist",
+  "description": "Hair & Make-up Artist in Berlin seit 1987. Spezialist für Bridal, Editorial und Events.",
+  "url": "https://stephanschmied.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" },
+  "sameAs": ["https://instagram.com/schmiedsteph"],
+  "knowsAbout": ["Hair Styling", "Make-up Artistry", "Bridal Make-up", "Editorial Make-up"]
+};
+---
+
+<Layout
+  title="Stephan Schmied – Hair & Make-up Artist Berlin"
+  description="Hair & Make-up Artist in Berlin seit 1987. Spezialist für Bridal, Editorial, Events und Beauty Workshops. Brand Ambassador Max Factor 2007–2019."
+  schemaOrg={schema}
+>
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img
+        src="https://placehold.co/1920x1080/F5F0EB/F5F0EB"
+        alt="Stephan Schmied bei der Arbeit"
+        width="1920" height="1080"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1 class="hero-title">Stephan<br>Schmied</h1>
+      <p class="hero-sub">Hair &amp; Make-up Artist · Berlin · Since 1987</p>
+      <a href="/portfolio" class="btn btn-anthracite">Arbeiten entdecken</a>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ═══ LOGO BAR ═══ -->
+  <section class="logo-bar">
+    <div class="container">
+      <span class="label text-center" style="display:block">Vertrauen von</span>
+      <div class="logo-grid">
+        <span class="logo-item">Max Factor</span>
+        <span class="logo-item">Douglas</span>
+        <span class="logo-item">Gala</span>
+        <span class="logo-item">GQ</span>
+        <span class="logo-item">Interview Magazine</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CELEBRITY INTRO ═══ -->
+  <section class="section celeb-intro">
+    <div class="container celeb-grid fade-in">
+      <div class="celeb-portrait-wrap">
+        <img
+          src="/images/stephan-portrait.jpg"
+          alt="Stephan Schmied – Hair & Make-up Artist"
+          width="480" height="600"
+          loading="lazy"
+          class="celeb-portrait"
+        />
+      </div>
+      <div class="celeb-content">
+        <span class="label">Von den Covern der Welt zu deinem besonderen Moment</span>
+        <div class="celeb-names">
+          <span class="celeb-name">Kate Moss</span>
+          <span class="celeb-name">Iris Berben</span>
+          <span class="celeb-name">Gwyneth Paltrow</span>
+          <span class="celeb-name">Franziska Knuppe</span>
+          <span class="celeb-name">Liv Tyler</span>
+          <span class="celeb-name">Herbert Grönemeyer</span>
+          <span class="celeb-name">Eva Padberg</span>
+          <span class="celeb-name">Katja Riemann</span>
+        </div>
+        <div class="celeb-text">
+          <p>In fast vier Jahrzehnten hatte ich das Privileg, einige der bekanntesten Gesichter der Welt zu stylen – auf Laufstegen, für Kampagnen und auf den Covern internationaler Magazine.</p>
+          <p class="mt-sm">Und jetzt? Jetzt bringe ich genau diese Erfahrung zu dir. Denn du verdienst den gleichen Standard – ob für deine Hochzeit, dein Event oder deinen Beauty Workshop. Echte Hände. Echtes Handwerk. Kein Filter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT PREVIEW ═══ -->
+  <section class="section about-preview">
+    <div class="container about-grid">
+      <div class="about-img-wrap fade-in">
+        <img
+          src="/images/stephan-portrait.jpg"
+          alt="Portrait Stephan Schmied"
+          width="480" height="480"
+          loading="lazy"
+          class="about-portrait"
+        />
+      </div>
+      <div class="about-text fade-in delay-1">
+        <span class="label">Über mich</span>
+        <h2>Fast 40 Jahre<br>Erfahrung</h2>
+        <div class="divider"></div>
+        <p>Vom Wiener Friseursalon über internationale Fashion Weeks bis zu den größten Beauty-Magazinen Deutschlands. Mein Talent: die individuelle Schönheit jedes Menschen hervorzuheben.</p>
+        <p class="mt-sm">Echte Hände. Echtes Handwerk. In einer Welt voller Filter und KI-generierter Perfektion – ein Artist, der dich wirklich schön macht.</p>
+        <a href="/about" class="btn btn-outline mt-md">Mehr über mich</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section class="section services-section" style="background:#fff">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="label">Was ich anbiete</span>
+        <h2 class="section-title">Services</h2>
+      </div>
+      <div class="services-grid mt-md">
+        <a href="/services#bridal" class="service-card fade-in">
+          <div class="service-card-img-wrap">
+            <img src="https://placehold.co/600x400/1A1A1A/FAFAF8?text=Bridal" alt="Bridal Make-up" width="600" height="400" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <h3>Bridal</h3>
+            <p>Dein perfekter Look für den wichtigsten Tag. Vom Probetermin bis zum letzten Tanz.</p>
+          </div>
+        </a>
+        <a href="/services#editorial" class="service-card fade-in delay-1">
+          <div class="service-card-img-wrap">
+            <img src="https://placehold.co/600x400/4A4A4A/FAFAF8?text=Editorial" alt="Editorial Make-up" width="600" height="400" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <h3>Events &amp; Editorial</h3>
+            <p>Fashion, Beauty, Celebrity. Für Shootings, Kampagnen und Red Carpet.</p>
+          </div>
+        </a>
+        <a href="/masterclasses" class="service-card fade-in delay-2">
+          <div class="service-card-img-wrap">
+            <img src="https://placehold.co/600x400/C9A96E/1A1A1A?text=Beauty+Workshops" alt="Beauty Workshops" width="600" height="400" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <h3>Beauty Workshops</h3>
+            <p>Du willst die Techniken lernen, mit denen ich Kate Moss und Iris Berben gestylt habe? In meinen Beauty Workshops zeige ich dir Schritt für Schritt, wie Profis arbeiten – mit Produkten, die du zu Hause oder bei DM findest.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="label">Stimmen meiner Kunden</span>
+        <h2 class="section-title">Was sie sagen</h2>
+      </div>
+      <div class="testimonials-grid mt-md">
+        <div class="testimonial fade-in">
+          <blockquote>"Stephan hat mich an meinem Hochzeitstag so wunderschön gemacht, ich habe mich wie ein Star gefühlt."</blockquote>
+          <cite>— Anna K., Braut</cite>
+        </div>
+        <div class="testimonial fade-in delay-1">
+          <blockquote>"Professionell, kreativ und unglaublich einfühlsam. Die beste Entscheidung für unser Shooting."</blockquote>
+          <cite>— Maria S., Fotografin</cite>
+        </div>
+        <div class="testimonial fade-in delay-2">
+          <blockquote>"Nach 40 Jahren Erfahrung merkt man jeden Pinselstrich. Absolute Weltklasse."</blockquote>
+          <cite>— Thomas R., Art Director</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="cta-section fade-in">
+    <h2>Bereit für deinen Look?</h2>
+    <a href="/contact" class="btn btn-gold">Jetzt Kontakt aufnehmen</a>
+  </section>
+</Layout>
+
+<style>
+  /* ─── Hero ─── */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #F5F0EB;
+    color: #2C2825;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(245,240,235,0.3) 0%, rgba(245,240,235,0.15) 60%, rgba(245,240,235,0.4) 100%);
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  .hero-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 1.5rem;
+    max-width: none;
+  }
+  .hero-title {
+    font-family: var(--font-signature);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+    color: #2C2825;
+    text-transform: none;
+  }
+  .hero-sub {
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(44,40,37,0.6);
+    margin-bottom: 3rem;
+    max-width: none;
+  }
+  .btn-anthracite {
+    background: #2C2825;
+    color: #F5F0EB;
+    border-color: #2C2825;
+  }
+  .btn-anthracite:hover {
+    background: #A89B8C;
+    border-color: #A89B8C;
+    color: #F5F0EB;
+  }
+  .hero-scroll-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  .hero-scroll-hint span {
+    display: block;
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, rgba(44,40,37,0.35));
+    margin: 0 auto;
+    animation: scrollHint 2s ease infinite;
+  }
+  @keyframes scrollHint {
+    0%   { transform: scaleY(0); transform-origin: top; }
+    50%  { transform: scaleY(1); transform-origin: top; }
+    51%  { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+
+  /* ─── Celebrity Intro ─── */
+  .celeb-intro { background: var(--color-bg); }
+  .celeb-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .celeb-portrait-wrap { flex-shrink: 0; }
+  .celeb-portrait {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 4px;
+    filter: none;
+  }
+  .celeb-names {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 1.5rem 0 2rem;
+  }
+  .celeb-name {
+    font-family: var(--font-body);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    color: #2C2825;
+    line-height: 1.5;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .celeb-text p {
+    color: var(--color-secondary);
+    font-size: 0.95rem;
+    max-width: 52ch;
+  }
+  @media (max-width: 900px) {
+    .celeb-grid { grid-template-columns: 1fr; gap: var(--sp-md); }
+    .celeb-portrait { max-width: 300px; border-radius: 50%; aspect-ratio: 1; object-fit: cover; }
+    .celeb-names { flex-direction: row; flex-wrap: wrap; gap: 0 1.5rem; }
+  }
+
+  /* ─── About preview ─── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .about-portrait {
+    border-radius: 50%;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 3px solid var(--color-border);
+  }
+  .about-text h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+
+  /* ─── Services ─── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .service-card {
+    display: block;
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    transition: box-shadow var(--transition);
+  }
+  .service-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.1); }
+  .service-card-img-wrap { overflow: hidden; }
+  .service-card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+  }
+  .service-card:hover img { transform: scale(1.04); }
+  .service-card-body { padding: 1.5rem; }
+  .service-card-body h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .service-card-body p {
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    max-width: none;
+  }
+
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: var(--sp-md); }
+    .about-portrait { max-width: 260px; margin: 0 auto; }
+  }
+
+</style>

@@ -1,0 +1,179 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const items = [
+  { id: 1,  cat: 'Bridal',    title: 'Hochzeit Berlin',          credits: 'Hair & Make-up: Stephan Schmied | Foto: Gregor Hohenberg',           img: 'https://placehold.co/600x800/1A1A1A/FAFAF8?text=Bridal+1',    w: 600, h: 800 },
+  { id: 2,  cat: 'Editorial', title: 'Gala Magazine Cover',      credits: 'Hair & Make-up: Stephan Schmied | Foto: Esther Haase | Pub: Gala',    img: 'https://placehold.co/600x450/4A4A4A/FAFAF8?text=Editorial+1', w: 600, h: 450 },
+  { id: 3,  cat: 'Beauty',    title: 'Beauty Editorial GQ',      credits: 'Hair & Make-up: Stephan Schmied | Foto: Joachim Baldauf | Pub: GQ',   img: 'https://placehold.co/600x700/C9A96E/1A1A1A?text=Beauty+1',    w: 600, h: 700 },
+  { id: 4,  cat: 'Celebrity', title: 'Red Carpet Berlin',        credits: 'Hair & Make-up: Stephan Schmied | Foto: Jim Rakete',                  img: 'https://placehold.co/600x900/2a2a2a/FAFAF8?text=Celebrity+1', w: 600, h: 900 },
+  { id: 5,  cat: 'Bridal',    title: 'Sommerhochzeit Brandenburg', credits: 'Hair & Make-up: Stephan Schmied | Foto: Gregor Hohenberg',          img: 'https://placehold.co/600x400/1A1A1A/C9A96E?text=Bridal+2',    w: 600, h: 400 },
+  { id: 6,  cat: 'Grooming',  title: 'GQ Grooming',              credits: 'Hair & Make-up: Stephan Schmied | Foto: Heji Shin | Pub: GQ',         img: 'https://placehold.co/600x750/4A4A4A/C9A96E?text=Grooming+1',  w: 600, h: 750 },
+  { id: 7,  cat: 'Editorial', title: 'ZOO Magazine',             credits: 'Hair & Make-up: Stephan Schmied | Foto: Ellen von Unwerth | Pub: ZOO', img: 'https://placehold.co/600x850/1A1A1A/FAFAF8?text=Editorial+2', w: 600, h: 850 },
+  { id: 8,  cat: 'Beauty',    title: 'Douglas Kampagne',          credits: 'Hair & Make-up: Stephan Schmied | Foto: Esther Haase | Klient: Douglas', img: 'https://placehold.co/600x600/C9A96E/FAFAF8?text=Beauty+2',  w: 600, h: 600 },
+  { id: 9,  cat: 'Celebrity', title: 'Interview Magazine',       credits: 'Hair & Make-up: Stephan Schmied | Foto: Heji Shin | Pub: Interview',  img: 'https://placehold.co/600x800/2a2a2a/C9A96E?text=Celebrity+2', w: 600, h: 800 },
+  { id: 10, cat: 'Bridal',    title: 'Destination Wedding Toskana', credits: 'Hair & Make-up: Stephan Schmied | Foto: Joachim Baldauf',          img: 'https://placehold.co/600x450/1A1A1A/FAFAF8?text=Bridal+3',   w: 600, h: 450 },
+  { id: 11, cat: 'Grooming',  title: 'Helmut Lang Kampagne',     credits: 'Hair & Make-up: Stephan Schmied | Foto: Jim Rakete | Klient: Helmut Lang', img: 'https://placehold.co/600x700/3a3a3a/FAFAF8?text=Grooming+2', w: 600, h: 700 },
+  { id: 12, cat: 'Editorial', title: 'Max Factor DACH',          credits: 'Hair & Make-up: Stephan Schmied | Foto: Gregor Hohenberg | Klient: Max Factor', img: 'https://placehold.co/600x900/C9A96E/1A1A1A?text=Editorial+3', w: 600, h: 900 },
+];
+
+const categories = ['Alle', 'Bridal', 'Beauty', 'Editorial', 'Celebrity', 'Grooming'];
+---
+
+<Layout
+  title="Portfolio – Stephan Schmied Hair & Make-up Artist Berlin"
+  description="Ausgewählte Arbeiten aus fast vier Jahrzehnten. Bridal, Editorial, Beauty, Celebrity, Grooming. Fotografen: Ellen von Unwerth, Jim Rakete, Gregor Hohenberg und mehr."
+>
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">Meine Arbeiten</span>
+      <h1>Portfolio</h1>
+      <p>Ausgewählte Arbeiten aus fast vier Jahrzehnten</p>
+    </div>
+  </section>
+
+  <!-- Filter + Grid -->
+  <section class="section">
+    <div class="container">
+      <!-- Filter bar -->
+      <div class="filter-bar" role="group" aria-label="Portfolio Filter">
+        {categories.map((cat, i) => (
+          <button
+            class:list={['filter-btn', { active: i === 0 }]}
+            data-filter={cat === 'Alle' ? 'all' : cat}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <!-- Masonry grid -->
+      <div class="masonry-grid" id="portfolio-grid">
+        {items.map((item, idx) => (
+          <div
+            class="portfolio-item"
+            data-category={item.cat}
+            data-index={idx}
+            role="button"
+            tabindex="0"
+            aria-label={`${item.title} öffnen`}
+          >
+            <img
+              src={item.img}
+              alt={item.title}
+              width={item.w}
+              height={item.h}
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="portfolio-overlay">
+              <h3>{item.title}</h3>
+              <span>{item.cat}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox-dialog" id="lightbox" role="dialog" aria-modal="true" aria-label="Bild vergrößert">
+    <button class="lightbox-close" id="lb-close" aria-label="Schließen">×</button>
+    <button class="lightbox-arrow lightbox-prev" id="lb-prev" aria-label="Vorheriges Bild">&#8249;</button>
+    <button class="lightbox-arrow lightbox-next" id="lb-next" aria-label="Nächstes Bild">&#8250;</button>
+    <div class="lightbox-inner">
+      <img class="lightbox-img" id="lb-img" src="" alt="" />
+      <div class="lightbox-caption" id="lb-caption"></div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  // ─── Filter ───
+  const filterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const allItems   = document.querySelectorAll<HTMLElement>('.portfolio-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter!;
+      allItems.forEach(item => {
+        const show = filter === 'all' || item.dataset.category === filter;
+        item.style.display = show ? '' : 'none';
+      });
+    });
+  });
+
+  // ─── Lightbox ───
+  const lightbox = document.getElementById('lightbox')!;
+  const lbImg    = document.getElementById('lb-img') as HTMLImageElement;
+  const lbCaption = document.getElementById('lb-caption')!;
+  const lbClose  = document.getElementById('lb-close')!;
+  const lbPrev   = document.getElementById('lb-prev')!;
+  const lbNext   = document.getElementById('lb-next')!;
+
+  // Build data from items (injected at build time)
+  const data: { src: string; title: string; credits: string }[] = [];
+  document.querySelectorAll<HTMLElement>('.portfolio-item').forEach(el => {
+    const img = el.querySelector('img')!;
+    const titleEl = el.querySelector<HTMLElement>('.portfolio-overlay h3');
+    data.push({
+      src: img.src,
+      title: titleEl?.textContent ?? '',
+      credits: img.alt,
+    });
+  });
+
+  let current = 0;
+
+  function visibleIndices() {
+    return [...allItems]
+      .map((el, i) => ({ el, i }))
+      .filter(({ el }) => el.style.display !== 'none')
+      .map(({ i }) => i);
+  }
+
+  function openAt(idx: number) {
+    current = idx;
+    const d = data[idx];
+    lbImg.src = d.src;
+    lbImg.alt = d.title;
+    // Find credits from DOM
+    const itemEl = allItems[idx];
+    const creditsEl = itemEl?.querySelector<HTMLElement>('[data-credits]');
+    lbCaption.textContent = creditsEl?.dataset.credits ?? d.title;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function navigate(dir: 1 | -1) {
+    const vis = visibleIndices();
+    const pos = vis.indexOf(current);
+    const next = vis[(pos + dir + vis.length) % vis.length];
+    openAt(next);
+  }
+
+  allItems.forEach((item, i) => {
+    const open = () => openAt(i);
+    item.addEventListener('click', open);
+    item.addEventListener('keydown', (e) => { if ((e as KeyboardEvent).key === 'Enter') open(); });
+  });
+
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click',  () => navigate(-1));
+  lbNext.addEventListener('click',  () => navigate(1));
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape')     close();
+    if (e.key === 'ArrowLeft')  navigate(-1);
+    if (e.key === 'ArrowRight') navigate(1);
+  });
+</script>
