@@ -23,7 +23,7 @@ const schema = {
   <section class="hero">
     <div class="hero-bg">
       <img
-        src="https://placehold.co/1920x1080/1A1A1A/2a2a2a?text=Hero+Bild"
+        src="https://placehold.co/1920x1080/F5F0EB/C9A96E?text=Hero+Bild"
         alt="Stephan Schmied bei der Arbeit"
         width="1920" height="1080"
         loading="eager"
@@ -224,13 +224,14 @@ const schema = {
     max-width: none;
   }
   .hero-title {
+    font-family: var(--font-signature);
     font-size: clamp(4rem, 12vw, 10rem);
-    font-weight: 300;
+    font-weight: 400;
     line-height: 0.95;
     letter-spacing: 0.05em;
     margin-bottom: 1.5rem;
     color: #2C2825;
-    text-transform: uppercase;
+    text-transform: none;
   }
   .hero-sub {
     font-size: 0.9rem;
@@ -289,7 +290,7 @@ const schema = {
     font-family: var(--font-body);
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 22px;
     color: #2C2825;
     line-height: 1.5;
     text-transform: none;
@@ -362,9 +363,4 @@ const schema = {
     .about-portrait { max-width: 260px; margin: 0 auto; }
   }
 
-  /* Header starts dark on cream hero (index page only) */
-  :global(#site-header:not(.scrolled) .logo-name) { color: #2C2825; }
-  :global(#site-header:not(.scrolled) .logo-sub)  { color: rgba(44,40,37,0.55); }
-  :global(#site-header:not(.scrolled) .nav-link)  { color: rgba(44,40,37,0.75); }
-  :global(#site-header:not(.scrolled) .hamburger span) { background: #2C2825; }
 </style>

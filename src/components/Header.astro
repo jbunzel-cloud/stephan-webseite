@@ -2,7 +2,7 @@
 const navLinks = [
   { href: '/portfolio',     label: 'Portfolio' },
   { href: '/services',      label: 'Services & Preise' },
-  { href: '/masterclasses', label: 'Beauty Workshops' },
+  { href: '/masterclasses', label: 'Masterclasses' },
   { href: '/about',         label: 'Über mich' },
   { href: '/blog',          label: 'Blog' },
   { href: '/contact',       label: 'Kontakt' },
@@ -76,18 +76,19 @@ const currentPath = Astro.url.pathname;
   /* Logo */
   .logo { display: flex; flex-direction: column; line-height: 1.2; }
   .logo-name {
-    font-family: var(--font-heading);
+    font-family: var(--font-signature);
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.05em;
-    color: #fff;
+    text-transform: none;
+    color: #2C2825;
     transition: color 0.4s;
   }
   .logo-sub {
     font-size: 0.65rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.65);
+    color: rgba(44,40,37,0.55);
     transition: color 0.4s;
   }
   .logo.dark-logo .logo-name { color: var(--color-text); }
@@ -105,7 +106,7 @@ const currentPath = Astro.url.pathname;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-weight: 500;
-    color: rgba(255,255,255,0.85);
+    color: rgba(44,40,37,0.75);
     position: relative;
     padding-bottom: 2px;
     transition: color var(--transition);
@@ -137,7 +138,7 @@ const currentPath = Astro.url.pathname;
     display: block;
     width: 24px;
     height: 1px;
-    background: #fff;
+    background: #2C2825;
     transition: transform 0.3s ease, opacity 0.3s ease, background 0.4s;
   }
   .hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
