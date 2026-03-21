@@ -1,0 +1,205 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Kontakt & Buchung – Stephan Schmied Hair & Make-up Artist Berlin"
+  description="Buche Stephan Schmied für Bridal, Events, Shootings, Masterclasses oder Corporate. Antwort innerhalb von 24 Stunden. Berlin und deutschlandweit."
+>
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">Lass uns reden</span>
+      <h1>Kontakt</h1>
+      <p>Lass uns deinen perfekten Look planen</p>
+    </div>
+  </section>
+
+  <!-- ─── Contact Grid ─── -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Formular -->
+        <div class="fade-in">
+          <span class="label">Schreib mir</span>
+          <h2 style="font-size:2rem;margin-bottom:var(--sp-md)">Anfrage senden</h2>
+
+          <!-- Formspree – ersetze DEINE_ID mit deiner echten Formspree-Formular-ID -->
+          <form
+            action="https://formspree.io/f/DEINE_ID"
+            method="POST"
+            class="contact-form"
+            novalidate
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Name *</label>
+                <input
+                  id="name" name="name" type="text"
+                  class="form-input" required
+                  placeholder="Dein vollständiger Name"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">E-Mail *</label>
+                <input
+                  id="email" name="email" type="email"
+                  class="form-input" required
+                  placeholder="deine@email.de"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="phone">Telefon (optional)</label>
+                <input
+                  id="phone" name="phone" type="tel"
+                  class="form-input"
+                  placeholder="+49 ..."
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="anlass">Anlass *</label>
+                <select id="anlass" name="anlass" class="form-select form-input" required>
+                  <option value="" disabled selected>Anlass wählen</option>
+                  <option value="Hochzeit">Hochzeit</option>
+                  <option value="Event">Event</option>
+                  <option value="Shooting">Shooting</option>
+                  <option value="Masterclass">Masterclass</option>
+                  <option value="Corporate">Corporate</option>
+                  <option value="Sonstiges">Sonstiges</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="date">Wunschdatum</label>
+              <input id="date" name="date" type="date" class="form-input" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Nachricht *</label>
+              <textarea
+                id="message" name="message"
+                class="form-textarea form-input" required
+                placeholder="Erzähl mir von deinem Wunsch-Look, dem Anlass, der Location…"
+              ></textarea>
+            </div>
+
+            <div class="form-checkbox">
+              <input id="privacy" name="privacy" type="checkbox" required />
+              <label for="privacy">
+                Ich habe die <a href="/datenschutz" class="privacy-link">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. *
+              </label>
+            </div>
+
+            <!-- Formspree honeypot (spam protection) -->
+            <input type="text" name="_gotcha" style="display:none" />
+            <input type="hidden" name="_subject" value="Neue Anfrage über stephanschmied.com" />
+
+            <button type="submit" class="btn btn-gold">Anfrage senden</button>
+          </form>
+        </div>
+
+        <!-- Kontaktinfo -->
+        <div class="fade-in delay-1">
+          <span class="label">Kontakt</span>
+          <h2 style="font-size:2rem;margin-bottom:var(--sp-md)">Direkt erreichen</h2>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">@</div>
+            <div>
+              <p style="font-size:0.75rem;color:var(--color-secondary);margin-bottom:0.15rem;max-width:none">E-Mail</p>
+              <a href="mailto:info@stephanschmied.com" class="contact-link">info@stephanschmied.com</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="5"/>
+                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
+            <div>
+              <p style="font-size:0.75rem;color:var(--color-secondary);margin-bottom:0.15rem;max-width:none">Instagram</p>
+              <a href="https://instagram.com/schmiedsteph" target="_blank" rel="noopener noreferrer" class="contact-link">@schmiedsteph</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <p style="font-size:0.75rem;color:var(--color-secondary);margin-bottom:0.15rem;max-width:none">Standort</p>
+              <p class="contact-link" style="cursor:default">Berlin, Deutschland</p>
+            </div>
+          </div>
+
+          <div class="map-placeholder">
+            <!-- Google Maps Embed hier einfügen -->
+            📍 Berlin, Deutschland
+          </div>
+
+          <div class="response-note">
+            <span class="response-dot"></span>
+            Antwort innerhalb von 24 Stunden
+          </div>
+
+          <!-- Calendly -->
+          <div class="calendly-placeholder">
+            <p><strong>Oder buche direkt einen Termin:</strong></p>
+            <p style="margin-top:0.5rem;font-size:0.82rem">
+              <!-- Calendly Embed hier einfügen -->
+              Calendly-Widget hier einfügen:<br>
+              <code style="font-size:0.75rem;color:var(--color-gold)">&lt;div class="calendly-inline-widget" data-url="https://calendly.com/DEIN_ACCOUNT"&gt;&lt;/div&gt;</code>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .contact-link {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    transition: color var(--transition);
+    max-width: none;
+  }
+  .contact-link:hover { color: var(--color-gold); }
+  .privacy-link { color: var(--color-gold); text-decoration: underline; }
+  .response-note {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--color-secondary);
+    margin: 1.25rem 0;
+  }
+  .response-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #22c55e;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: pulse 2s ease infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.4; }
+  }
+
+  @media (max-width: 768px) {
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Impressum – Stephan Schmied Hair & Make-up Artist Berlin"
+  description="Impressum und Pflichtangaben gemäß § 5 TMG für stephanschmied.com"
+>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Impressum</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="legal-content fade-in">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <p>[Name, Adresse, Kontakt hier einfügen]</p>
+        <p>
+          Stephan Schmied<br />
+          [Straße und Hausnummer]<br />
+          [PLZ] Berlin<br />
+          Deutschland
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          E-Mail: <a href="mailto:info@stephanschmied.com">info@stephanschmied.com</a><br />
+          Instagram: <a href="https://instagram.com/schmiedsteph" target="_blank" rel="noopener noreferrer">@schmiedsteph</a>
+        </p>
+
+        <h2>Umsatzsteuer-ID</h2>
+        <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />[USt-IdNr. hier einfügen]</p>
+
+        <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+        <p>
+          Berufsbezeichnung: Hair & Make-up Artist<br />
+          Zuständige Kammer: [Kammer hier einfügen]<br />
+          Verliehen in: Deutschland
+        </p>
+
+        <h2>Vertreten durch Close Up Agency</h2>
+        <p>
+          Close Up Agency Hamburg<br />
+          [Adresse der Agentur hier einfügen]
+        </p>
+
+        <h2>Haftung für Inhalte</h2>
+        <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+
+        <h2>Haftung für Links</h2>
+        <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+
+        <h2>Urheberrecht</h2>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal-content { max-width: 720px; }
+  .legal-content h2 {
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .legal-content h2:first-child { margin-top: 0; }
+  .legal-content p {
+    color: var(--color-secondary);
+    margin-bottom: 0.75rem;
+    max-width: none;
+  }
+  .legal-content a { color: var(--color-gold); }
+  .legal-content a:hover { text-decoration: underline; }
+</style>

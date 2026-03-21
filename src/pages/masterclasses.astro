@@ -1,0 +1,266 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const upcomingDates = [
+  {
+    date: '2026-04-18',
+    dateFormatted: '18. April 2026',
+    title: 'Bridal Make-up Masterclass',
+    location: 'Berlin, Studio Mitte',
+    type: 'Live',
+    price: '199 EUR',
+    spots: 4,
+  },
+  {
+    date: '2026-05-10',
+    dateFormatted: '10. Mai 2026',
+    title: 'Natural Glow – Editorial Techniques',
+    location: 'Online via Zoom',
+    type: 'Online',
+    price: '79 EUR',
+    spots: 12,
+  },
+  {
+    date: '2026-06-07',
+    dateFormatted: '7. Juni 2026',
+    title: 'Grooming für Männer & Frauen',
+    location: 'Berlin, Studio Mitte',
+    type: 'Live',
+    price: '149 EUR',
+    spots: 8,
+  },
+];
+---
+
+<Layout
+  title="Masterclasses – Stephan Schmied Hair & Make-up Artist Berlin"
+  description="Lerne Hair & Make-up von einem Profi mit fast 40 Jahren Erfahrung. Live-Workshops in Berlin, Online-Kurse via Zoom und Self-Paced Video-Kurse. Jetzt Platz sichern."
+>
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">Workshops &amp; Kurse</span>
+      <h1>Masterclasses</h1>
+      <p>Lerne vom Profi mit fast 40 Jahren Erfahrung</p>
+    </div>
+  </section>
+
+  <!-- ─── Nächste Termine ─── -->
+  <section class="section">
+    <div class="container">
+      <div class="fade-in text-center">
+        <span class="label">Demnächst</span>
+        <h2 class="section-title">Nächste Termine</h2>
+      </div>
+      <div class="dates-grid mt-md">
+        {upcomingDates.map((d, i) => (
+          <div class:list={['date-card fade-in', `delay-${i}`]}>
+            <div class="date-card-top">
+              <span class="date-tag">{d.type}</span>
+              <p class="date-date">{d.dateFormatted}</p>
+            </div>
+            <h3>{d.title}</h3>
+            <p class="date-location">{d.location}</p>
+            <div class="date-bottom">
+              <div>
+                <p class="date-price">{d.price}</p>
+                <p class="date-spots">{d.spots} Plätze verfügbar</p>
+              </div>
+              <a href="/contact?anlass=Masterclass" class="btn btn-gold">Platz sichern</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Formate ─── -->
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <div class="fade-in text-center">
+        <span class="label">Wie es funktioniert</span>
+        <h2 class="section-title">Formate</h2>
+      </div>
+      <div class="formats-grid mt-md">
+        <div class="format-card fade-in">
+          <div class="format-icon">🎨</div>
+          <h3>Live in Berlin</h3>
+          <p class="format-meta">3 Stunden · 8–12 Teilnehmer</p>
+          <div class="format-price">149 – 249 EUR</div>
+          <p>Intensiver Workshop in meinem Studio in Berlin Mitte. Hands-on, direkt am Modell. Inklusive Materialien und Snacks.</p>
+          <a href="/contact?anlass=Masterclass" class="btn btn-outline mt-sm">Anfragen</a>
+        </div>
+        <div class="format-card featured fade-in delay-1">
+          <div class="format-icon">💻</div>
+          <h3>Online via Zoom</h3>
+          <p class="format-meta">90 Minuten · Unbegrenzt Plätze</p>
+          <div class="format-price">49 – 79 EUR</div>
+          <p>Live-Session via Zoom – von überall auf der Welt. Mit Q&A, Aufzeichnung und begleitenden PDF-Materialien.</p>
+          <a href="/contact?anlass=Masterclass" class="btn btn-gold mt-sm">Anfragen</a>
+        </div>
+        <div class="format-card fade-in delay-2">
+          <div class="format-icon">📱</div>
+          <h3>Self-Paced Kurs</h3>
+          <p class="format-meta">Modularer Videokurs · Lebenslang Zugang</p>
+          <div class="format-price">199 – 399 EUR</div>
+          <p>Lerne in deinem eigenen Tempo. Hochwertige Videomodule, Schritt-für-Schritt-Anleitungen und Community-Zugang.</p>
+          <a href="/contact?anlass=Masterclass" class="btn btn-outline mt-sm">Anfragen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Video Teaser ─── -->
+  <section class="section">
+    <div class="container">
+      <div class="video-teaser fade-in">
+        <span class="label text-center" style="display:block;margin-bottom:0.5rem">Einblick</span>
+        <h2 class="text-center" style="margin-bottom:var(--sp-md)">Schau dir einen Ausschnitt<br>aus meinem letzten Workshop an</h2>
+        <!-- Hier YouTube Embed einfügen -->
+        <div class="video-placeholder">
+          <div class="video-play-icon">▶</div>
+          <p>YouTube-Embed hier einfügen<br><small>z.B.: &lt;iframe src="https://www.youtube.com/embed/VIDEO_ID"&gt;&lt;/iframe&gt;</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Testimonials ─── -->
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <div class="fade-in text-center">
+        <span class="label">Was Teilnehmer sagen</span>
+        <h2 class="section-title">Stimmen</h2>
+      </div>
+      <div class="testimonials-grid mt-md" style="max-width:800px;margin-left:auto;margin-right:auto;margin-top:var(--sp-md)">
+        <div class="testimonial fade-in">
+          <blockquote>"Die Masterclass war absolut beeindruckend. Stephan teilt sein Wissen großzügig und erklärt jeden Schritt verständlich. Ich habe mehr gelernt als in jedem Online-Tutorial."</blockquote>
+          <cite>— Sabine M., Make-up Enthusiastin, Hamburg</cite>
+        </div>
+        <div class="testimonial fade-in delay-1">
+          <blockquote>"Als Berufseinsteigerin war der Live-Workshop ein Wendepunkt für mich. Die Technik, die Atmosphäre, das direkte Feedback – unbezahlbar."</blockquote>
+          <cite>— Lena K., Auszubildende Make-up Artistin, Berlin</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Newsletter ─── -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner fade-in">
+        <span class="label">Bleib informiert</span>
+        <h2>Erfahre als Erstes von neuen Terminen</h2>
+        <p>Kein Spam. Nur neue Masterclass-Termine und exklusive Frühbucher-Rabatte.</p>
+        <!-- MailerLite Formular hier einfügen -->
+        <div class="newsletter-form">
+          <input type="email" placeholder="Deine E-Mail-Adresse" class="form-input" style="max-width:380px" />
+          <button class="btn btn-gold">Anmelden</button>
+        </div>
+        <p class="newsletter-note">Durch Anmeldung stimmst du der Datenschutzerklärung zu. Abmeldung jederzeit möglich.</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Dates */
+  .dates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .date-card {
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: box-shadow var(--transition);
+  }
+  .date-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.08); }
+  .date-card-top { display: flex; justify-content: space-between; align-items: center; }
+  .date-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--color-gold);
+    color: var(--color-dark);
+    padding: 0.2rem 0.6rem;
+  }
+  .date-date { font-size: 0.82rem; color: var(--color-secondary); max-width: none; }
+  .date-card h3 { font-size: 1.2rem; }
+  .date-location { font-size: 0.85rem; color: var(--color-secondary); max-width: none; }
+  .date-bottom { display: flex; justify-content: space-between; align-items: flex-end; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--color-border); }
+  .date-price { font-family: var(--font-heading); font-size: 1.3rem; max-width: none; }
+  .date-spots { font-size: 0.75rem; color: var(--color-secondary); max-width: none; }
+
+  /* Formats */
+  .formats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .format-card {
+    border: 1px solid var(--color-border);
+    padding: 2.5rem var(--sp-md);
+    text-align: center;
+    transition: box-shadow var(--transition);
+  }
+  .format-card.featured {
+    border-color: var(--color-gold);
+    border-width: 2px;
+    background: #fff;
+  }
+  .format-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.08); }
+  .format-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .format-card h3 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+  .format-meta { font-size: 0.78rem; color: var(--color-gold); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem; max-width: none; }
+  .format-price { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1rem; }
+  .format-card p { font-size: 0.88rem; color: var(--color-secondary); max-width: none; }
+
+  /* Video */
+  .video-teaser { text-align: center; }
+  .video-placeholder {
+    background: var(--color-dark);
+    aspect-ratio: 16/9;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.5);
+    gap: 1rem;
+  }
+  .video-play-icon {
+    width: 5rem; height: 5rem;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  /* Newsletter */
+  .newsletter-section {
+    background: var(--color-dark);
+    color: #fff;
+    padding: var(--sp-lg) 0;
+    text-align: center;
+  }
+  .newsletter-inner { max-width: 600px; margin: 0 auto; }
+  .newsletter-inner h2 { font-size: clamp(1.75rem, 3vw, 2.75rem); margin-bottom: 0.75rem; }
+  .newsletter-inner > p { color: rgba(255,255,255,0.6); margin: 0 auto 1.5rem; font-size: 0.92rem; max-width: none; }
+  .newsletter-form { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+  .newsletter-form .form-input { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: #fff; }
+  .newsletter-form .form-input::placeholder { color: rgba(255,255,255,0.4); }
+  .newsletter-note { font-size: 0.75rem; color: rgba(255,255,255,0.35); max-width: none; }
+
+  @media (max-width: 768px) {
+    .formats-grid { grid-template-columns: 1fr; }
+  }
+</style>

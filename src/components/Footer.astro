@@ -1,0 +1,150 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="footer-inner container">
+    <div class="footer-col footer-brand">
+      <p class="footer-logo">Stephan Schmied</p>
+      <p class="footer-tagline">Hair &amp; Make-up Artist<br>Berlin · Since 1987</p>
+    </div>
+
+    <nav class="footer-col footer-nav" aria-label="Footer-Navigation">
+      <p class="footer-heading">Navigation</p>
+      <ul>
+        <li><a href="/">Startseite</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/services">Services & Preise</a></li>
+        <li><a href="/masterclasses">Masterclasses</a></li>
+        <li><a href="/about">Über mich</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-col footer-contact">
+      <p class="footer-heading">Kontakt &amp; Social</p>
+      <a href="mailto:info@stephanschmied.com" class="footer-email">
+        info@stephanschmied.com
+      </a>
+      <div class="footer-social">
+        <a href="https://instagram.com/schmiedsteph" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="5"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="3"/>
+            <path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/>
+          </svg>
+        </a>
+      </div>
+      <!-- Cloudflare Web Analytics – Hier einfügen -->
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© {year} Stephan Schmied. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal">
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: var(--color-dark);
+    color: rgba(255,255,255,0.75);
+    padding-top: var(--sp-lg);
+  }
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: var(--sp-md);
+    padding-bottom: var(--sp-lg);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    max-width: none;
+  }
+  .footer-tagline {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.45);
+    max-width: none;
+  }
+  .footer-heading {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+    max-width: none;
+  }
+  .footer-nav ul { list-style: none; }
+  .footer-nav li { margin-bottom: 0.5rem; }
+  .footer-nav a {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.65);
+    transition: color var(--transition);
+  }
+  .footer-nav a:hover { color: var(--color-gold); }
+  .footer-email {
+    display: block;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 1.25rem;
+    transition: color var(--transition);
+  }
+  .footer-email:hover { color: var(--color-gold); }
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+  }
+  .footer-social a {
+    color: rgba(255,255,255,0.55);
+    transition: color var(--transition);
+  }
+  .footer-social a:hover { color: var(--color-gold); }
+
+  .footer-bottom {
+    padding: 1.25rem 0;
+  }
+  .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .footer-bottom p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.35);
+    max-width: none;
+  }
+  .footer-legal {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .footer-legal a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.35);
+    transition: color var(--transition);
+  }
+  .footer-legal a:hover { color: var(--color-gold); }
+
+  @media (max-width: 768px) {
+    .footer-inner { grid-template-columns: 1fr; }
+    .footer-bottom .container { flex-direction: column; align-items: flex-start; }
+  }
+</style>
