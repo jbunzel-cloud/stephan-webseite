@@ -25,13 +25,13 @@ import Layout from '../layouts/Layout.astro';
           <span class="label">Schreib mir</span>
           <h2 style="font-size:2rem;margin-bottom:var(--sp-md)">Anfrage senden</h2>
 
-          <!-- Formspree – ersetze DEINE_ID mit deiner echten Formspree-Formular-ID -->
           <form
-            action="https://formspree.io/f/DEINE_ID"
+            action="https://api.web3forms.com/submit"
             method="POST"
             class="contact-form"
             novalidate
           >
+            <input type="hidden" name="access_key" value="0b3417b8-75f0-4452-a205-67c02fb54296" />
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="name">Name *</label>
@@ -95,9 +95,7 @@ import Layout from '../layouts/Layout.astro';
               </label>
             </div>
 
-            <!-- Formspree honeypot (spam protection) -->
-            <input type="text" name="_gotcha" style="display:none" />
-            <input type="hidden" name="_subject" value="Neue Anfrage über stephanschmied.com" />
+            <input type="checkbox" name="botcheck" style="display:none" />
 
             <button type="submit" class="btn btn-gold">Anfrage senden</button>
           </form>

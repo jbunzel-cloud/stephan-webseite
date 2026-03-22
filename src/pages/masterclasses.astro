@@ -45,8 +45,19 @@ const formats = [
   <!-- ─── Intro ─── -->
   <section class="section coaching-intro">
     <div class="container">
-      <div class="fade-in coaching-intro-inner">
-        <p>Ich habe fast 40 Jahre lang die Gesichter geschminkt, die du aus Magazinen kennst – Kate Moss, Iris Berben, Gwyneth Paltrow, Toni Garn. Jetzt zeige ich dir, wie du das Beste aus deinem eigenen Gesicht herausholst. Meine Coachings sind keine YouTube-Tutorials zum Nachklicken. Sie sind persönlich, individuell und auf dich zugeschnitten – ob im 1:1, in der Gruppe oder online.</p>
+      <div class="coaching-intro-grid fade-in">
+        <div class="coaching-intro-img">
+          <img
+            src="/images/behind-the-scenes/backstage-hair-studio.jpg"
+            alt="Stephan Schmied im Studio – Make-up Coaching"
+            width="600" height="750"
+            loading="lazy"
+            style="width:100%;object-fit:cover;display:block"
+          />
+        </div>
+        <div class="coaching-intro-inner">
+          <p>Ich habe fast 40 Jahre lang die Gesichter geschminkt, die du aus Magazinen kennst – Kate Moss, Iris Berben, Gwyneth Paltrow, Toni Garn. Jetzt zeige ich dir, wie du das Beste aus deinem eigenen Gesicht herausholst. Meine Coachings sind keine YouTube-Tutorials zum Nachklicken. Sie sind persönlich, individuell und auf dich zugeschnitten – ob im 1:1, in der Gruppe oder online.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -135,16 +146,23 @@ const formats = [
   }
 
   .coaching-intro { background: #fff; }
+  .coaching-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: var(--sp-lg);
+    align-items: center;
+  }
   .coaching-intro-inner {
-    max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
+    max-width: 600px;
   }
   .coaching-intro-inner p {
     font-size: 1.05rem;
     color: var(--color-secondary);
     line-height: 1.8;
     max-width: none;
+  }
+  @media (max-width: 768px) {
+    .coaching-intro-grid { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 768px) {
