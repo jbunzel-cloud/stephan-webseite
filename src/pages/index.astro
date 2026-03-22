@@ -60,20 +60,7 @@ const schema = {
       <div class="celeb-content text-center">
         <span class="label">Von den Covern der Welt zu deinem besonderen Moment</span>
         <h2 class="celeb-headline">VON DEN COVERN DER WELT<br>ZU DEINEM BESONDEREN MOMENT</h2>
-        <div class="celeb-names">
-          <span class="celeb-name">Kate Moss</span>
-          <span class="celeb-name">Iris Berben</span>
-          <span class="celeb-name">Gwyneth Paltrow</span>
-          <span class="celeb-name">Daniel Brühl</span>
-          <span class="celeb-name">Franziska Knuppe</span>
-          <span class="celeb-name">Toni Garn</span>
-          <span class="celeb-name">Eva Padberg</span>
-          <span class="celeb-name">Sophia Thomalla</span>
-          <span class="celeb-name">Liv Tyler</span>
-          <span class="celeb-name">Herbert Grönemeyer</span>
-          <span class="celeb-name">Katja Riemann</span>
-          <span class="celeb-name">Wilson Gonzalez Ochsenknecht</span>
-        </div>
+        <p class="celeb-credits">KATE MOSS <span class="celeb-dot">·</span> IRIS BERBEN <span class="celeb-dot">·</span> GWYNETH PALTROW <span class="celeb-dot">·</span> LIV TYLER <span class="celeb-dot">·</span> DANIEL BRÜHL <span class="celeb-dot">·</span> HERBERT GRÖNEMEYER <span class="celeb-dot">·</span> FRANZISKA KNUPPE <span class="celeb-dot">·</span> TONI GARN <span class="celeb-dot">·</span> EVA PADBERG <span class="celeb-dot">·</span> SOPHIA THOMALLA <span class="celeb-dot">·</span> KATJA RIEMANN <span class="celeb-dot">·</span> WILSON GONZALEZ OCHSENKNECHT <span class="celeb-dot">·</span> ESTHER SCHWEINS <span class="celeb-dot">·</span> SABRINA SETLUR</p>
         <div class="celeb-text">
           <p>In fast vier Jahrzehnten hatte ich das Privileg, einige der bekanntesten Gesichter der Welt zu stylen – auf Laufstegen, für Kampagnen und auf den Covern internationaler Magazine.</p>
           <p class="mt-sm">Als Hair &amp; Make-up Artist bei Victoria's Secret, als Chef de Cabine für Michalsky, Lala Berlin und Caviar Gauche, und als Brand Ambassador für Max Factor – zwölf Jahre lang.</p>
@@ -327,23 +314,21 @@ const schema = {
     margin: 0.75rem 0 2rem;
     line-height: 1.3;
   }
-  .celeb-names {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0 2rem;
+  .celeb-credits {
+    font-family: 'Bebas Neue', var(--font-heading), sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #2C2825;
+    line-height: 2;
+    text-align: center;
     margin: 0 0 2rem;
   }
-  .celeb-name {
-    font-family: var(--font-body);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 22px;
-    color: #2C2825;
-    line-height: 1.6;
-    text-transform: none;
-    letter-spacing: 0;
+  .celeb-dot {
+    color: #A89B8C;
+  }
+  @media (max-width: 767px) {
+    .celeb-credits { font-size: 18px; }
   }
   .celeb-text p {
     color: var(--color-secondary);
