@@ -102,6 +102,29 @@ const formats = [
     </div>
   </section>
 
+  <!-- ─── Newsletter ─── -->
+  <section class="section newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner fade-in">
+        <span class="label">Immer informiert</span>
+        <h2 class="section-title">NEUE TERMINE NICHT VERPASSEN</h2>
+        <p class="newsletter-sub">Erfahre als Erstes von neuen Coaching-Terminen und Workshops.</p>
+        <form class="newsletter-form" action="" method="POST">
+          <div class="newsletter-row">
+            <input
+              type="email"
+              name="email"
+              class="form-input newsletter-input"
+              placeholder="deine@email.de"
+              required
+            />
+            <button type="submit" class="btn btn-gold">Anmelden</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── CTA ─── -->
   <section class="cta-section fade-in">
     <h2>Bereit für dein Coaching?</h2>
@@ -167,5 +190,25 @@ const formats = [
 
   @media (max-width: 768px) {
     .formats-grid { grid-template-columns: 1fr; }
+  }
+
+  .newsletter-section { background: #F5F0EB; }
+  .newsletter-inner {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .newsletter-sub {
+    color: var(--color-secondary);
+    font-size: 0.95rem;
+    margin: 0.75rem auto 1.5rem;
+  }
+  .newsletter-row {
+    display: flex;
+    gap: 0.75rem;
+  }
+  .newsletter-input { flex: 1; }
+  @media (max-width: 480px) {
+    .newsletter-row { flex-direction: column; }
   }
 </style>
