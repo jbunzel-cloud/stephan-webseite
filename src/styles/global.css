@@ -195,14 +195,14 @@ p { max-width: 68ch; }
 .logo-strip {
   font-family: 'Outfit', sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #8A8279;
   text-align: center;
   margin: 0;
-  line-height: 1.6;
-  word-break: break-word;
+  line-height: 1.8;
+  word-break: keep-all;
 }
 
 /* ─── Cards ─── */
