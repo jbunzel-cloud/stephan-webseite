@@ -192,23 +192,17 @@ p { max-width: 68ch; }
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
-.logo-bar .label { text-align: center; }
-.logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem 3.5rem;
-  margin-top: var(--sp-sm);
-}
-.logo-item {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+.logo-strip {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #bbb;
-  opacity: 0.7;
+  color: #8A8279;
+  text-align: center;
+  margin: 0;
+  line-height: 1.6;
+  word-break: break-word;
 }
 
 /* ─── Cards ─── */
