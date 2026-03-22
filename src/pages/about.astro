@@ -6,7 +6,7 @@ const milestones = [
   { year: '1987',         text: 'Start als freiberuflicher Hair & Make-up Artist' },
   { year: '1990er',       text: 'Internationale Fashion Weeks. Kate Moss, Gwyneth Paltrow, Liv Tyler, Iris Berben, Franziska Knuppe, Toni Garn, Eva Padberg, Daniel Brühl, Sophia Thomalla, Gonzalez Ochsenknecht und viele mehr' },
   { year: '1998',         text: 'Umzug nach Berlin' },
-  { year: '2000er',       text: 'Hair & Make-up Artist für Victoria\'s Secret' },
+  { year: '2000er',       text: 'Hair & Make-up Artist bei der Victoria\'s Secret Fashion Show Paris', img: '/images/behind-the-scenes/victorias-secret-backstage.jpg', imgAlt: "Backstage Victoria's Secret Fashion Show Paris – Stephan Schmied" },
   { year: '2007',         text: 'Brand Ambassador Max Factor für Deutschland, Österreich und die Schweiz' },
   { year: '2019',         text: 'Neue Freiheit: Editorial, Bridal, Make-up Coaching' },
   { year: 'Heute',        text: 'Von den Covern der Welt zu deinem Moment' },
@@ -32,8 +32,8 @@ const milestones = [
       <div class="story-grid">
         <div class="fade-in">
           <img
-            src="/images/stephan-portrait.jpg"
-            alt="Stephan Schmied – Hair & Make-up Artist Berlin"
+            src="/images/behind-the-scenes/backstage-makeup-01.jpg"
+            alt="Stephan Schmied bei der Arbeit"
             width="600" height="800"
             loading="lazy"
             style="width:100%;object-fit:cover;object-position:top"
@@ -82,6 +82,15 @@ const milestones = [
             <div class:list={['timeline-item fade-in', `delay-${Math.min(i, 3)}`]}>
               <p class="timeline-year">{m.year}</p>
               <p class="timeline-text">{m.text}</p>
+              {m.img && (
+                <img
+                  src={m.img}
+                  alt={m.imgAlt}
+                  width="560" height="360"
+                  loading="lazy"
+                  class="timeline-img"
+                />
+              )}
             </div>
           ))}
         </div>

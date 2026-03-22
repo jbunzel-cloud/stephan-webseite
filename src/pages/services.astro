@@ -18,11 +18,22 @@ import Layout from '../layouts/Layout.astro';
   <!-- ─── Bridal ─── -->
   <section class="section" id="bridal">
     <div class="container">
-      <div class="fade-in">
-        <span class="label">Hochzeit</span>
-        <h2 class="section-title">Bridal</h2>
-        <div class="divider"></div>
-        <p style="max-width:55ch">Dein Hochzeitstag ist kein normaler Tag. Deshalb behandle ich ihn auch nicht so. Ich bringe die gleiche Sorgfalt und Präzision mit, die ich bei meinen Shootings mit internationalen Topmodels gelernt habe – mit einem einzigen Unterschied: An diesem Tag zählst nur du.</p>
+      <div class="bridal-intro-grid fade-in">
+        <div>
+          <span class="label">Hochzeit</span>
+          <h2 class="section-title">Bridal</h2>
+          <div class="divider"></div>
+          <p style="max-width:55ch">Dein Hochzeitstag ist kein normaler Tag. Deshalb behandle ich ihn auch nicht so. Ich bringe die gleiche Sorgfalt und Präzision mit, die ich bei meinen Shootings mit internationalen Topmodels gelernt habe – mit einem einzigen Unterschied: An diesem Tag zählst nur du.</p>
+        </div>
+        <div>
+          <img
+            src="/images/behind-the-scenes/backstage-lipstick-professional.jpg"
+            alt="Bridal Make-up – Stephan Schmied"
+            width="600" height="700"
+            loading="lazy"
+            style="width:100%;object-fit:cover;display:block"
+          />
+        </div>
       </div>
 
       <div class="pricing-grid">
@@ -102,8 +113,8 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="fade-in delay-1">
           <img
-            src="https://placehold.co/600x700/4A4A4A/FAFAF8?text=Editorial"
-            alt="Editorial Make-up"
+            src="/images/portfolio-beauty/beauty-editorial-01.jpg"
+            alt="Editorial Make-up – Stephan Schmied"
             width="600" height="700"
             loading="lazy"
             style="width:100%;object-fit:cover"
@@ -119,8 +130,8 @@ import Layout from '../layouts/Layout.astro';
       <div class="service-detail-grid reverse">
         <div class="fade-in delay-1">
           <img
-            src="https://placehold.co/600x500/1A1A1A/C9A96E?text=Grooming"
-            alt="Männer Grooming"
+            src="/images/portfolio-grooming/grooming-editorial-01.jpg"
+            alt="Männer Grooming – Stephan Schmied"
             width="600" height="500"
             loading="lazy"
             style="width:100%;object-fit:cover"
@@ -212,6 +223,17 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+  .bridal-intro-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--sp-lg);
+    align-items: start;
+    margin-bottom: var(--sp-md);
+  }
+  @media (max-width: 768px) {
+    .bridal-intro-grid { grid-template-columns: 1fr; }
+    .bridal-intro-grid > div:last-child { order: -1; }
+  }
   .service-detail-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -545,6 +545,12 @@ p { max-width: 68ch; }
   font-size: 1.1rem;
   color: var(--color-text);
 }
+.timeline-img {
+  width: 100%;
+  margin-top: 0.75rem;
+  object-fit: cover;
+  display: block;
+}
 
 /* ─── Blog ─── */
 .blog-grid {
