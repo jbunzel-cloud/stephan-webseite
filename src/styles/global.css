@@ -200,9 +200,9 @@ p { max-width: 68ch; }
   text-transform: uppercase;
   color: #8A8279;
   text-align: center;
-  margin: 0;
+  max-width: none;
+  margin: 0 auto;
   line-height: 1.8;
-  word-break: keep-all;
 }
 
 /* ─── Cards ─── */
