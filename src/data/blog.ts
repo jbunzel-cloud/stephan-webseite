@@ -14,7 +14,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'braut-makeup-berlin-guide',
     title: 'Braut-Make-up Berlin: Der ultimative Guide',
     date: '2026-03-10',
-    category: 'Bridal',
+    category: 'Hochzeit',
     teaser: 'Alles, was du über Braut-Make-up in Berlin wissen musst – von der Wahl des richtigen Artists bis zum perfekten Probetermin.',
     readTime: 8,
     image: 'https://placehold.co/800x500/1A1A1A/C9A96E?text=Braut+Make-up',
