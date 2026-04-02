@@ -731,6 +731,14 @@ p { max-width: 68ch; }
   .contact-grid { grid-template-columns: 1fr; gap: var(--sp-md); }
   .masonry-grid { columns: 2 180px; }
   .page-hero { padding: 9rem 0 4rem; }
+  .logo-bar { overflow: hidden; }
+  .logo-strip {
+    font-size: 10px;
+    padding: 0 20px;
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
 }
 @media (max-width: 480px) {
   .masonry-grid { columns: 1; }
