@@ -102,65 +102,6 @@ const formats = [
     </div>
   </section>
 
-  <!-- ─── Vorher / Nachher ─── -->
-  <section class="section vorher-nachher-section" style="background:#fff">
-    <div class="container">
-      <div class="fade-in text-center">
-        <span class="label">Ergebnisse</span>
-        <h2 class="section-title">Vorher / Nachher</h2>
-      </div>
-      <div class="vn-grid mt-md">
-
-        <!-- Paar 1 -->
-        <!-- Platzhalter – durch echtes Vorher/Nachher ersetzen -->
-        <div class="vn-pair fade-in">
-          <div class="vn-item">
-            <span class="vn-label">VORHER</span>
-            <img
-              src="/images/coaching/coaching-04-gesicht.jpg"
-              alt="Coaching – Vorher"
-              width="400" height="500"
-              loading="lazy"
-            />
-          </div>
-          <div class="vn-item">
-            <span class="vn-label">NACHHER</span>
-            <img
-              src="/images/editorial-fashion/editorial-13-blonde-beauty.jpg"
-              alt="Coaching – Nachher"
-              width="400" height="500"
-              loading="lazy"
-            />
-          </div>
-        </div>
-
-        <!-- Paar 2 -->
-        <!-- Platzhalter – durch echtes Vorher/Nachher ersetzen -->
-        <div class="vn-pair fade-in delay-1">
-          <div class="vn-item">
-            <span class="vn-label">VORHER</span>
-            <img
-              src="/images/coaching/coaching-07-selbst-schminken.jpg"
-              alt="Coaching – Vorher"
-              width="400" height="500"
-              loading="lazy"
-            />
-          </div>
-          <div class="vn-item">
-            <span class="vn-label">NACHHER</span>
-            <img
-              src="/images/editorial-fashion/editorial-20-messy-bun.jpg"
-              alt="Coaching – Nachher"
-              width="400" height="500"
-              loading="lazy"
-            />
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- ─── Newsletter ─── -->
   <section class="section newsletter-section">
     <div class="container">
@@ -230,9 +171,18 @@ const formats = [
   .coaching-intro { background: #fff; }
   .coaching-intro-grid {
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: auto 1fr;
     gap: var(--sp-lg);
     align-items: center;
+  }
+  .coaching-intro-img {
+    max-width: 480px;
+    margin: 40px 40px 40px 0;
+  }
+  .coaching-intro-img img {
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
   }
   .coaching-intro-inner {
     max-width: 600px;
@@ -243,47 +193,14 @@ const formats = [
     line-height: 1.8;
     max-width: none;
   }
+  @media (max-width: 900px) {
+    .coaching-intro-img { max-width: 320px; margin: 20px auto; }
+  }
   @media (max-width: 768px) {
     .coaching-intro-grid { grid-template-columns: 1fr; }
-  }
-
-  @media (max-width: 768px) {
+    .coaching-intro-img { max-width: 100%; margin: 0; }
+    .coaching-intro-img img { max-height: 400px; width: 100%; }
     .formats-grid { grid-template-columns: 1fr; }
-  }
-
-  /* ─── Vorher / Nachher ─── */
-  .vn-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-  }
-  .vn-pair {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-  }
-  .vn-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-  .vn-label {
-    font-family: var(--font-body);
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--color-secondary);
-  }
-  .vn-item img {
-    width: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  @media (max-width: 768px) {
-    .vn-pair {
-      grid-template-columns: 1fr;
-    }
   }
 
   .newsletter-section { background: #F5F0EB; }
