@@ -1,2 +1,2 @@
 # stephan-webseite
-WEbseite MakeubArtistSteph
+Webseite MakeubArtistSteph
