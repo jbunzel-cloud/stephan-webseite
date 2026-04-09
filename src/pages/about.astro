@@ -26,6 +26,16 @@ const milestones = [
     </div>
   </section>
 
+  <!-- ─── Leitaussage ─── -->
+  <section class="leitaussage-section fade-in">
+    <div class="container">
+      <div class="leitaussage-inner">
+        <p class="leitaussage-quote">„Meine größte Stärke liegt darin,<br>die individuellen Vorzüge jedes<br>Menschen hervorzuheben und zu betonen."</p>
+        <p class="leitaussage-author">— STEPHAN SCHMIED</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── Story ─── -->
   <section class="section">
     <div class="container">
@@ -41,7 +51,7 @@ const milestones = [
         </div>
         <div class="fade-in delay-1">
           <span class="label">Meine Geschichte</span>
-          <h2 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:var(--sp-sm)">Echte Hände.<br>Echtes Handwerk.</h2>
+          <h2 style="font-size:clamp(1.2rem,2vw,1.5rem);margin-bottom:var(--sp-sm)">Echte Hände. Echtes Handwerk.</h2>
           <div class="divider"></div>
           <div class="story-text">
             <p>Alles begann in einem Wiener Friseursalon, Anfang der Achtziger. Ich war Lehrling, und eine Kundin fragte, ob ich auch Make-up könne. Ich konnte nicht. Also lernte ich es. Und hörte nicht mehr auf.</p>
@@ -107,19 +117,10 @@ const milestones = [
     </div>
   </section>
 
-  <!-- ─── Philosophie ─── -->
-  <section class="philosophy-section">
-    <div class="container">
-      <div class="philosophy-inner fade-in">
-        <div class="philosophy-quote">
-          "Meine größte Stärke liegt darin,<br>
-          die individuellen Vorzüge jedes<br>
-          Menschen hervorzuheben und zu betonen."
-        </div>
-        <p class="philosophy-author">— STEPHAN SCHMIED</p>
-        <a href="/contact" class="btn btn-gold mt-md">Zusammenarbeiten</a>
-      </div>
-    </div>
+  <!-- ─── CTA ─── -->
+  <section class="cta-section fade-in">
+    <h2>Zusammenarbeiten</h2>
+    <a href="/contact" class="btn btn-gold">Jetzt anfragen</a>
   </section>
 </Layout>
 
@@ -169,13 +170,13 @@ const milestones = [
     max-width: none;
   }
 
-  .philosophy-section {
+  .leitaussage-section {
     background: var(--color-dark);
     padding: var(--sp-xl) var(--sp-md);
     text-align: center;
   }
-  .philosophy-inner { max-width: 780px; margin: 0 auto; }
-  .philosophy-quote {
+  .leitaussage-inner { max-width: 780px; margin: 0 auto; }
+  .leitaussage-quote {
     font-family: var(--font-heading);
     font-size: clamp(1.6rem, 3.5vw, 3rem);
     font-style: normal;
@@ -183,7 +184,7 @@ const milestones = [
     line-height: 1.4;
     margin-bottom: 1.5rem;
   }
-  .philosophy-author {
+  .leitaussage-author {
     font-family: var(--font-signature);
     font-size: 1.1rem;
     font-weight: 400;
