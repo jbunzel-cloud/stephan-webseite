@@ -77,6 +77,7 @@ const schema = {
         <h1 class="hero-title">STEPHAN SCHMIED</h1>
         <p class="hero-sub1">Hair &amp; Make-up Artist · Berlin</p>
         <p class="hero-sub2">Coaching · Hochzeit · Editorial</p>
+        <p class="hero-statement">„Ich überdecke keine Schönheit –<br>ich mache sie sichtbar."</p>
         <div class="hero-buttons">
           <a href="/contact" class="btn btn-anthracite">Coaching buchen</a>
           <a href="/portfolio" class="btn btn-hero-outline">Portfolio</a>
@@ -156,6 +157,16 @@ const schema = {
     </div>
   </section>
 
+  <!-- ═══ PHILOSOPHIE ═══ -->
+  <section class="philosophie-section fade-in">
+    <div class="container">
+      <div class="philosophie-inner">
+        <p class="philosophie-text">Alles begann in einem Wiener Friseursalon, Anfang der Achtziger. Seitdem habe ich eines gelernt: Jedes Gesicht hat seine eigene Schönheit. Meine Aufgabe ist nicht, sie zu überdecken – sondern sie sichtbar zu machen.</p>
+        <p class="philosophie-author">— STEPHAN SCHMIED</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ ABOUT PREVIEW ═══ -->
   <section class="section about-preview">
     <div class="container about-grid">
@@ -170,11 +181,11 @@ const schema = {
       </div>
       <div class="about-text fade-in delay-1">
         <span class="label">Über mich</span>
-        <h2>Fast 40 Jahre<br>Erfahrung</h2>
+        <h2>Ich mache sichtbar,<br>was schon da ist.</h2>
         <div class="divider"></div>
-        <p>Vom Wiener Friseursalon über internationale Fashion Weeks bis zu den größten Beauty-Magazinen Deutschlands. Mein Talent: die individuelle Schönheit jedes Menschen hervorzuheben.</p>
-        <p class="mt-sm">Echte Hände. Echtes Handwerk. In einer Welt voller Filter und KI-generierter Perfektion – ein Artist, der dich wirklich schön macht.</p>
-        <a href="/about" class="btn btn-outline mt-md">Mehr über mich</a>
+        <p>Vom Wiener Friseursalon über internationale Fashion Weeks bis zu den großen Bridal-Momenten in Berlin. Fast 40 Jahre, ein Handwerk, eine Überzeugung.</p>
+        <p class="mt-sm">Echte Hände. Kein Filter. Kein Algorithmus.</p>
+        <a href="/about" class="btn btn-outline mt-md">Meine Geschichte</a>
       </div>
     </div>
   </section>
@@ -306,7 +317,16 @@ const schema = {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: rgba(44,40,37,0.45);
+    margin-bottom: 1.5rem;
+    max-width: none;
+  }
+  .hero-statement {
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    font-style: italic;
+    color: var(--color-gold);
     margin-bottom: 2.5rem;
+    line-height: 1.5;
     max-width: none;
   }
   .hero-buttons {
@@ -416,6 +436,32 @@ const schema = {
     font-size: 0.95rem;
     max-width: 60ch;
     margin: 0 auto;
+  }
+
+  /* ─── Philosophie ─── */
+  .philosophie-section {
+    background: var(--color-dark);
+    padding: var(--sp-lg) var(--sp-md);
+    text-align: center;
+  }
+  .philosophie-inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .philosophie-text {
+    font-family: var(--font-heading);
+    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+    font-style: italic;
+    color: #fff;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+    max-width: none;
+  }
+  .philosophie-author {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: var(--color-gold);
+    max-width: none;
   }
 
   /* ─── About preview ─── */
