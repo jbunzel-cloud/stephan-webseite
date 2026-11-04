@@ -25,14 +25,25 @@ const formats = [
 
 <Layout
   title="Make-up Coaching – Stephan Schmied Hair & Make-up Artist Berlin"
-  description="Lerne Make-up von einem Profi mit fast 40 Jahren Erfahrung. 1:1 Coaching, Gruppen-Workshop und Team-Event in Berlin. Jetzt buchen."
+  description="Hör auf, Geld für Make-up auszugeben, das nicht zu dir passt. Stephan Schmied zeigt dir in einem persönlichen Coaching, was wirklich zu dir gehört – 1:1, Gruppe oder Team-Event in Berlin."
 >
   <!-- Hero -->
   <section class="page-hero">
     <div class="container">
       <span class="label">Coaching &amp; Kurse</span>
       <h1>Make-up Coaching</h1>
-      <p>Was ich in vier Jahrzehnten gelernt habe – für dich</p>
+      <p>Dein Make-up soll zu dir passen – nicht umgekehrt.</p>
+    </div>
+  </section>
+
+  <!-- ─── Hook ─── -->
+  <section class="coaching-hook">
+    <div class="container">
+      <div class="hook-inner fade-in">
+        <p class="hook-stat">1.000 €</p>
+        <p class="hook-text">So viel geben viele Frauen für Make-up aus, das nicht zu ihnen passt – und das ungenutzt in der Schublade landet. Nicht weil sie falsch schmücken. Sondern weil niemand ihnen je erklärt hat, was wirklich zu ihrem Gesicht, ihrer Haut und ihrem Alltag gehört.</p>
+        <p class="hook-cta">Genau das ändere ich.</p>
+      </div>
     </div>
   </section>
 
@@ -50,7 +61,8 @@ const formats = [
           />
         </div>
         <div class="coaching-intro-inner">
-          <p>Ich habe fast 40 Jahre lang die Gesichter geschminkt, die du aus Magazinen kennst – Kate Moss, Iris Berben, Gwyneth Paltrow, Toni Garn. Jetzt zeige ich dir, wie du das Beste aus deinem eigenen Gesicht herausholst. Meine Coachings sind keine YouTube-Tutorials zum Nachklicken. Sie sind persönlich, individuell und auf dich zugeschnitten – ob im 1:1 oder in der Gruppe.</p>
+          <p>Ich habe fast 40 Jahre lang die Gesichter geschminkt, die du aus Magazinen kennst – Kate Moss, Iris Berben, Gwyneth Paltrow, Toni Garn. Was ich dabei gelernt habe: Jedes Gesicht ist anders. Und jede Frau verdient einen Look, der ihr gehört.</p>
+          <p class="mt-sm">Meine Coachings sind kein Kurs und kein Tutorial. Du bringst deine eigenen Produkte mit – ich zeige dir, was davon wirklich zu dir passt, was du weglassen kannst und wie du in zehn Minuten das Beste aus dir herausholst.</p>
         </div>
       </div>
     </div>
@@ -128,6 +140,39 @@ const formats = [
 </Layout>
 
 <style>
+  /* ─── Hook ─── */
+  .coaching-hook {
+    background: var(--color-dark);
+    padding: var(--sp-lg) var(--sp-md);
+    text-align: center;
+  }
+  .hook-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .hook-stat {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 7vw, 5rem);
+    color: var(--color-gold);
+    line-height: 1;
+    margin-bottom: 1.25rem;
+    max-width: none;
+  }
+  .hook-text {
+    color: rgba(255,255,255,0.75);
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: none;
+    margin-bottom: 1.5rem;
+  }
+  .hook-cta {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #fff;
+    max-width: none;
+  }
+
   .formats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
