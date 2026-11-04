@@ -3,14 +3,55 @@ import Layout from '../layouts/Layout.astro';
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Stephan Schmied",
-  "jobTitle": "Hair & Make-up Artist",
-  "description": "Hair & Make-up Artist in Berlin seit 1987. Spezialist für Hochzeit, Editorial und Events.",
-  "url": "https://stephanschmied.com",
-  "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" },
-  "sameAs": ["https://instagram.com/schmiedsteph"],
-  "knowsAbout": ["Hair Styling", "Make-up Artistry", "Hochzeits Make-up", "Editorial Make-up"]
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://stephanschmied.com/#person",
+      "name": "Stephan Schmied",
+      "jobTitle": "Hair & Make-up Artist",
+      "description": "Hair & Make-up Artist in Berlin seit 1987. Fast 40 Jahre Erfahrung in Hochzeit, Editorial, Events und Make-up Coaching. Markenbotschafter für Max Factor 2007–2019.",
+      "url": "https://stephanschmied.com",
+      "image": "https://stephanschmied.com/images/stephan-portrait.jpg",
+      "telephone": "+491773238988",
+      "email": "stephan@stephanschmied.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "sameAs": ["https://instagram.com/schmiedsteph"],
+      "knowsAbout": ["Hair Styling", "Make-up Artistry", "Hochzeits Make-up", "Editorial Make-up", "Make-up Coaching", "Grooming"],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Hair & Make-up Artist",
+        "occupationLocation": { "@type": "City", "name": "Berlin" }
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://stephanschmied.com/#business",
+      "name": "Stephan Schmied – Hair & Make-up Artist",
+      "url": "https://stephanschmied.com",
+      "telephone": "+491773238988",
+      "email": "stephan@stephanschmied.com",
+      "image": "https://stephanschmied.com/images/stephan-portrait.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Berlin" },
+        { "@type": "Country", "name": "Deutschland" }
+      ],
+      "priceRange": "€€€",
+      "currenciesAccepted": "EUR",
+      "openingHours": "Mo-Sa 09:00-19:00",
+      "hasMap": "https://stephanschmied.com/contact",
+      "sameAs": ["https://instagram.com/schmiedsteph"],
+      "employee": { "@id": "https://stephanschmied.com/#person" }
+    }
+  ]
 };
 ---
 
