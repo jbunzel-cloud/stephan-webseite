@@ -1,10 +1,58 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wann sollte ich meinen Hochzeitstermin buchen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "So früh wie möglich – idealerweise 12 bis 18 Monate im Voraus. Beliebte Sommerwochenenden in Berlin und Brandenburg sind schnell vergeben. Nach der Buchung ist dein Termin garantiert reserviert."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie läuft ein Probetermin ab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Der Probetermin dauert ca. 2–3 Stunden. Wir besprechen deine Wünsche, dein Brautkleid und den Stil der Hochzeit. Dann probieren wir verschiedene Looks aus – so hast du am großen Tag keine Überraschungen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche Produkte verwendest du?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eine Mischung aus professionellen High-End-Produkten und Marken aus fast 40 Jahren Erfahrung – langanhaltend, hautverträglich, perfekt für die Kamera und fürs echte Leben."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Reist du auch außerhalb Berlins?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, ich reise für Destination Weddings und Shootings deutsch- und europaweit. Reisekosten werden nach Aufwand berechnet und vorab transparent kommuniziert."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lange hält das Make-up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mit professionellen Techniken und den richtigen Produkten hält das Make-up problemlos 12–16 Stunden – durch Tränen, Tanzen und Umarmungen."
+      }
+    }
+  ]
+};
 ---
 
 <Layout
   title="Services & Preise – Stephan Schmied Hair & Make-up Artist Berlin"
   description="Hochzeits-Make-up, Events, Editorial, Grooming und Make-up Coaching. Transparente Preise für professionelle Hair & Make-up Services in Berlin und deutschlandweit."
+  schemaOrg={faqSchema}
 >
   <!-- Hero -->
   <section class="page-hero">
@@ -196,7 +244,7 @@ import Layout from '../layouts/Layout.astro';
 
         <details class="faq-item fade-in">
           <summary>Welche Produkte verwendest du?</summary>
-          <p class="faq-body">Eine Mischung aus professionellen High-End-Produkten und Marken, die ich in meiner Zeit als Max Factor Brand Ambassador kennen und lieben gelernt habe – die gleichen, die ich für Shootings mit Kate Moss oder Iris Berben verwendet habe. Langanhaltend, hautverträglich, perfekt für die Kamera und fürs echte Leben.</p>
+          <p class="faq-body">Eine Mischung aus professionellen High-End-Produkten und Marken aus fast 40 Jahren Erfahrung – die gleichen, die ich für Shootings mit Kate Moss oder Iris Berben verwendet habe. Langanhaltend, hautverträglich, perfekt für die Kamera und fürs echte Leben.</p>
         </details>
 
         <details class="faq-item fade-in">
