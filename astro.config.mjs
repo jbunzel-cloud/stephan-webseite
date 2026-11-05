@@ -7,6 +7,15 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://stephanschmied.com',
   output: 'static',
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    routes: {
+      extend: {
+        exclude: [
+          { pattern: '/sitemap-index.xml' },
+          { pattern: '/sitemap-0.xml' },
+        ],
+      },
+    },
+  }),
   integrations: [sitemap()],
 });
