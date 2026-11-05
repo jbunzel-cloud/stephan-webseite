@@ -11,6 +11,42 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'weniger-ist-mehr-makeup-tipps',
+    title: 'Weniger ist mehr: Wie du mit 5 Produkten besser aussiehst als mit 20',
+    date: '2026-11-05',
+    category: 'Beauty',
+    teaser: 'Die meisten Frauen besitzen zu viel Make-up – und nutzen es trotzdem falsch. Nach fast 40 Jahren vor dem Schminkspiegel weiß ich: Es geht nicht um mehr Produkte. Es geht um die richtigen.',
+    readTime: 6,
+    image: '/images/coaching/coaching-05-lippenstift.jpg',
+    content: `
+      <p>Ich sitze vor einer Frau. Auf dem Tisch vor ihr: Foundation in drei Farbtönen, vier Concealer, zwei Contour-Paletten, ein Highlighter-Set mit acht Tönen, Mascara in zwei Varianten, Lippenstifte in Farben, die sie „irgendwann mal" tragen möchte. Alles zusammen: leicht über tausend Euro.</p>
+      <p>Davon benutzt sie täglich: Mascara und Lippenbalsam.</p>
+      <p>Das ist kein Einzelfall. Es ist die Regel.</p>
+
+      <h2>Warum wir zu viel kaufen</h2>
+      <p>Die Beauty-Industrie verdient daran, dass wir glauben, noch ein Produkt zu brauchen. Der perfekte Blush. Die bessere Foundation. Der Concealer, der alles verdeckt. Jede Kampagne verspricht: Mit diesem Produkt bist du endlich richtig.</p>
+      <p>Das Problem: Niemand erklärt dir, was zu <em>deinem</em> Gesicht, deiner Haut, deinem Alltag passt. Du kaufst ins Blaue. Manches gefällt dir im Laden, wirkt aber zuhause falsch. Vieles landet nach zwei Anwendungen in der Schublade.</p>
+      <p>Ich habe in fast 40 Jahren tausende Gesichter geschminkt. Von Kate Moss bis zur Braut aus Mitte. Was ich dabei gelernt habe: Die Frauen, die am besten aussehen, haben nicht die meisten Produkte. Sie haben die richtigen.</p>
+
+      <h2>Die 5 Produkte, die wirklich reichen</h2>
+      <p><strong>1. Eine Foundation, die zu deiner Haut passt</strong> — nicht zu der Haut, die du gerne hättest. Der Farbton muss mit deinem Hals übereinstimmen, nicht mit dem, wie du gerne aussehen würdest.</p>
+      <p><strong>2. Ein Concealer</strong> — eine Nummer heller als die Foundation, gezielt unter die Augen und auf Rötungen. Nicht übers ganze Gesicht.</p>
+      <p><strong>3. Eine Mascara</strong> — die zu deinen Wimpern passt. Dünne Wimpern brauchen Volumen, lange Wimpern Definition. Eine Mascara für alles gibt es nicht.</p>
+      <p><strong>4. Ein Produkt für die Wangen</strong> — Blush oder Bronzer, aber nicht beides. Welches, hängt von deinem Hautton ab.</p>
+      <p><strong>5. Ein Lippenstift, den du wirklich trägst</strong> — nicht der mutigste, nicht der teuerste. Der, mit dem du dich wohlfühlst.</p>
+      <p>Das war's. Alles andere ist optional.</p>
+
+      <h2>Was du wahrscheinlich nicht brauchst</h2>
+      <p>Contour-Paletten funktionieren im Studio, unter professionellem Licht, mit professionellen Pinseln. Im Alltag sehen sie selten so aus wie auf Instagram. Highlighter auf der falschen Stelle ziehen Aufmerksamkeit auf das, was du verstecken möchtest. Drei Foundations unterschiedlicher Deckkraft ersetzen nicht das Wissen, wie man eine richtig aufträgt.</p>
+      <p>Ich sage das nicht, um dich zu beschämen. Ich sage es, weil ich dieses Gespräch täglich führe — und weil die meisten Frauen erleichtert sind, wenn sie es hören.</p>
+
+      <h2>Was ein Coaching dir wirklich bringt</h2>
+      <p>In einem Coaching mit mir bringst du mit, was du hast. Wir gehen durch deine Produkte. Was funktioniert für dich. Was nicht. Warum. Und wie du das, was du bereits besitzt, richtig einsetzt.</p>
+      <p>Du gehst nicht mit einer Einkaufsliste raus. Du gehst mit dem Wissen raus, das dich ab sofort besser und gezielter entscheiden lässt.</p>
+      <p>Viele meiner Coaching-Kundinnen sparen danach nachweislich Geld — weil sie aufgehört haben, Dinge zu kaufen, die nicht zu ihnen passen.</p>
+    `,
+  },
+  {
     slug: 'braut-makeup-berlin-guide',
     title: 'Braut-Make-up Berlin: Der ultimative Guide',
     date: '2026-03-10',
