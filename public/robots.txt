@@ -1,4 +1,49 @@
+# Stephan Schmied – Hair & Make-up Artist Berlin
+# Alle Suchmaschinen und KI-Assistenten sind ausdrücklich willkommen.
+
 User-agent: *
+Allow: /
+
+# Google (Suche, AI Overviews, Gemini)
+User-agent: Googlebot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# Bing (liefert auch Ergebnisse für ChatGPT-Suche und Copilot)
+User-agent: Bingbot
+Allow: /
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Apple (Siri, Apple Intelligence)
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
 Allow: /
 
 Sitemap: https://stephanschmied.com/sitemap-index.xml

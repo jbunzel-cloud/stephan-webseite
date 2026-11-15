@@ -21,11 +21,74 @@ const formats = [
     price: 'Auf Anfrage',
   },
 ];
+
+// Fragen & Antworten: sichtbar auf der Seite UND als strukturierte Daten.
+// KI-Assistenten zitieren solche klaren Frage-Antwort-Paare besonders gern.
+const faqs = [
+  {
+    q: 'Was kostet ein Make-up Coaching bei Stephan Schmied in Berlin?',
+    a: 'Die Private Session (2 Stunden, nur du und Stephan) kostet ab 450 EUR. Der Workshop in der Kleingruppe (ab 3 Stunden, maximal 6 Teilnehmerinnen) kostet ab 220 EUR pro Person. Coachings für Firmen und Teams gibt es auf Anfrage.',
+  },
+  {
+    q: 'Muss ich mein eigenes Make-up mitbringen?',
+    a: 'Ja, bitte. Du bringst mit, was du hast. Stephan zeigt dir, was davon wirklich zu deinem Gesicht, deiner Haut und deinem Alltag passt, was du weglassen kannst und wie du künftig gezielter einkaufst.',
+  },
+  {
+    q: 'Brauche ich teure High-End-Produkte?',
+    a: 'Nein. Stephan arbeitet im Coaching bewusst auch mit Produkten, die du zu Hause hast oder in der Drogerie wie DM findest. Entscheidend ist nicht der Preis, sondern dass Farbe, Textur und Technik zu dir passen.',
+  },
+  {
+    q: 'Für wen ist das Make-up Coaching geeignet?',
+    a: 'Für jede, die zu viel Make-up kauft, das am Ende ungenutzt in der Schublade liegt, oder sich mit ihrem Look unsicher fühlt. Vorkenntnisse brauchst du nicht. Auch angehende Make-up Artists nutzen die Private Session für direktes Feedback.',
+  },
+  {
+    q: 'Wo findet das Coaching statt?',
+    a: 'In Berlin, der Ort wird individuell abgesprochen. Für Firmen-Coachings und Team-Events kommt Stephan zu euch ins Unternehmen.',
+  },
+  {
+    q: 'Wer ist Stephan Schmied?',
+    a: 'Stephan Schmied ist Hair & Make-up Artist in Berlin und seit 1987 selbstständig. Er hat für Vogue, Elle, Vanity Fair und GQ gearbeitet, für die Fashion Shows von Victoria\'s Secret und war von 2007 bis 2019 Markenbotschafter für Max Factor in Deutschland, Österreich und der Schweiz.',
+  },
+  {
+    q: 'Wie buche ich ein Coaching?',
+    a: 'Am schnellsten per WhatsApp unter +49 177 323 8988, alternativ per Telefon oder E-Mail an stephan@stephanschmied.com. Stephan antwortet in der Regel innerhalb von 24 Stunden.',
+  },
+];
+
+const SITE = 'https://stephanschmied.com';
+const coachingSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': `${SITE}/masterclasses#coaching`,
+      name: 'Make-up Coaching in Berlin',
+      serviceType: 'Make-up Coaching',
+      description:
+        'Persönliches Make-up Coaching mit Stephan Schmied: Einzelsession, Workshop in der Kleingruppe oder Firmen-Event. Mit den eigenen Produkten, auch Drogerie.',
+      provider: { '@id': `${SITE}/#business` },
+      areaServed: { '@type': 'City', name: 'Berlin' },
+      offers: [
+        { '@type': 'Offer', name: 'Private Session (2 Stunden)', priceCurrency: 'EUR', priceSpecification: { '@type': 'PriceSpecification', minPrice: 450, priceCurrency: 'EUR' } },
+        { '@type': 'Offer', name: 'Workshop (ab 3 Stunden, max. 6 Personen)', priceCurrency: 'EUR', priceSpecification: { '@type': 'PriceSpecification', minPrice: 220, priceCurrency: 'EUR', unitText: 'pro Person' } },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+  ],
+};
 ---
 
 <Layout
   title="Make-up Coaching – Stephan Schmied Hair & Make-up Artist Berlin"
   description="Hör auf, Geld für Make-up auszugeben, das nicht zu dir passt. Stephan Schmied zeigt dir in einem persönlichen Coaching, was wirklich zu dir gehört – 1:1, Gruppe oder Team-Event in Berlin."
+  schemaOrg={coachingSchema}
 >
   <!-- Hero -->
   <section class="page-hero">
@@ -128,6 +191,24 @@ const formats = [
         <div class="studio-item fade-in delay-3">
           <img src="/images/coaching/coaching-07-selbst-schminken.jpg" alt="Make-up Coaching – Kundin übt Augen-Make-up selbst" width="400" height="500" loading="lazy" />
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ─── -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="fade-in text-center">
+        <span class="label">Häufige Fragen</span>
+        <h2 class="section-title">FAQ</h2>
+      </div>
+      <div class="faq-list mt-md" style="max-width:750px;margin-top:var(--sp-md)">
+        {faqs.map(f => (
+          <details class="faq-item fade-in">
+            <summary>{f.q}</summary>
+            <p class="faq-body">{f.a}</p>
+          </details>
+        ))}
       </div>
     </div>
   </section>

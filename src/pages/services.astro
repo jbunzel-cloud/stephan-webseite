@@ -47,12 +47,45 @@ const faqSchema = {
     }
   ]
 };
+
+const SITE = 'https://stephanschmied.com';
+const offer = (name: string, price: number, description: string, unit?: string) => ({
+  '@type': 'Offer',
+  name,
+  description,
+  priceCurrency: 'EUR',
+  priceSpecification: {
+    '@type': 'PriceSpecification',
+    minPrice: price,
+    priceCurrency: 'EUR',
+    ...(unit ? { unitText: unit } : {}),
+  },
+  seller: { '@id': `${SITE}/#business` },
+  areaServed: { '@type': 'City', name: 'Berlin' },
+});
+const offerCatalog = {
+  '@type': 'OfferCatalog',
+  '@id': `${SITE}/services#angebote`,
+  name: 'Leistungen und Preise von Stephan Schmied',
+  provider: { '@id': `${SITE}/#business` },
+  itemListElement: [
+    offer('Braut-Make-up Classic', 650, 'Braut-Make-up und Haarstyling am Hochzeitstag, 1 Probetermin, einzelne Wimpern, Anfahrt innerhalb Berlins.'),
+    offer('Braut-Make-up Premium', 1200, 'Braut-Make-up und Haarstyling, 2 Probetermine, 2 Begleitpersonen, 4 Stunden Begleitung am Hochzeitstag.'),
+    offer('Braut-Make-up Luxe', 2000, 'Alles aus Premium, komplette Hochzeitsgesellschaft bis 5 Personen, ganztägige Begleitung.'),
+    offer('Bräutigam-Grooming', 250, 'Grooming für den Bräutigam am Hochzeitstag.'),
+    offer('Events & Editorial', 1000, 'Tagesgage bis 10 Stunden für Shootings, Kampagnen, Magazine und Events.', 'pro Tag'),
+    offer('Grooming Business-Portrait', 250, 'Styling für Männer für Business-Portraits.'),
+    offer('Grooming Event-Styling', 350, 'Styling für Männer für Events und Red Carpet.'),
+    offer('Make-up Coaching Private Session', 450, '2 Stunden Einzelcoaching mit den eigenen Produkten.'),
+    offer('Make-up Workshop', 220, 'Ab 3 Stunden, maximal 6 Teilnehmerinnen.', 'pro Person'),
+  ],
+};
 ---
 
 <Layout
   title="Services & Preise – Stephan Schmied Hair & Make-up Artist Berlin"
   description="Hochzeits-Make-up, Events, Editorial, Grooming und Make-up Coaching. Transparente Preise für professionelle Hair & Make-up Services in Berlin und deutschlandweit."
-  schemaOrg={faqSchema}
+  schemaOrg={{ '@context': 'https://schema.org', '@graph': [ { ...faqSchema, '@context': undefined }, offerCatalog ] }}
 >
   <!-- Hero -->
   <section class="page-hero">
