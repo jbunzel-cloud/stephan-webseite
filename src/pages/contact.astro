@@ -84,6 +84,11 @@ import Layout from '../layouts/Layout.astro';
           Am schnellsten per WhatsApp — ich antworte in der Regel innerhalb von 24 Stunden.
         </div>
 
+        <p class="review-note">
+          Wir haben schon zusammengearbeitet?
+          <a href="https://g.page/r/CTLsEiY00BqBEAE/review" target="_blank" rel="noopener noreferrer">Ich freue mich über deine Bewertung auf Google.</a>
+        </p>
+
       </div>
     </div>
   </section>
@@ -168,6 +173,17 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.95rem;
     color: var(--color-text);
     transition: color var(--transition);
+  }
+  .review-note {
+    margin-top: 1.25rem;
+    font-size: 0.85rem;
+    color: var(--color-secondary);
+    max-width: none;
+  }
+  .review-note a {
+    color: var(--color-gold-dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
   .response-note {
     display: flex;
