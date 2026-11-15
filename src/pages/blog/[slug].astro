@@ -18,6 +18,24 @@ function formatDate(dateStr: string) {
 }
 
 const currentIndex = blogPosts.findIndex(p => p.slug === post.slug);
+const SITE = 'https://stephanschmied.com';
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  '@id': `${SITE}/blog/${post.slug}#article`,
+  headline: post.title,
+  description: post.teaser,
+  image: new URL(post.image, SITE).href,
+  datePublished: post.date,
+  dateModified: post.date,
+  inLanguage: 'de-DE',
+  articleSection: post.category,
+  author: { '@id': `${SITE}/#person`, '@type': 'Person', name: 'Stephan Schmied', url: `${SITE}/about` },
+  publisher: { '@id': `${SITE}/#person` },
+  mainEntityOfPage: `${SITE}/blog/${post.slug}`,
+  isPartOf: { '@id': `${SITE}/#website` },
+};
+
 const related = blogPosts.filter((_, i) => i !== currentIndex).slice(0, 3);
 ---
 
@@ -25,6 +43,9 @@ const related = blogPosts.filter((_, i) => i !== currentIndex).slice(0, 3);
   title={`${post.title} – Stephan Schmied Blog`}
   description={post.teaser}
   image={post.image}
+  ogType="article"
+  publishedTime={post.date}
+  schemaOrg={articleSchema}
 >
   <!-- Hero -->
   <section class="post-hero">
