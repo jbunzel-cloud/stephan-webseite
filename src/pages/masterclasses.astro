@@ -42,6 +42,10 @@ const faqs = [
     a: 'Für jede, die zu viel Make-up kauft, das am Ende ungenutzt in der Schublade liegt, oder sich mit ihrem Look unsicher fühlt. Vorkenntnisse brauchst du nicht. Auch angehende Make-up Artists nutzen die Private Session für direktes Feedback.',
   },
   {
+    q: 'Kann ich ein Make-up Coaching verschenken?',
+    a: 'Ja. Es gibt Gutscheine für die Private Session und für den Workshop, auf Wunsch mit persönlicher Widmung. Anfrage am einfachsten per WhatsApp unter +49 177 323 8988.',
+  },
+  {
     q: 'Wo findet das Coaching statt?',
     a: 'In Berlin, der Ort wird individuell abgesprochen. Für Firmen-Coachings und Team-Events kommt Stephan zu euch ins Unternehmen.',
   },
@@ -195,6 +199,16 @@ const coachingSchema = {
     </div>
   </section>
 
+  <!-- ─── Gutschein ─── -->
+  <section class="coaching-hook gift-section" id="gutschein">
+    <div class="hook-inner fade-in">
+      <span class="label">Zum Verschenken</span>
+      <h2 class="gift-title">Ein Coaching als Geschenk</h2>
+      <p class="hook-text">Für die Frau, die alles hat, außer einem Make-up, das wirklich zu ihr passt. Gutscheine gibt es für die Private Session (ab 450 EUR) und den Workshop (ab 220 EUR pro Person), auf Wunsch mit persönlicher Widmung von Stephan.</p>
+      <a href="https://wa.me/491773238988?text=Hallo%20Stephan%2C%20ich%20m%C3%B6chte%20gern%20einen%20Gutschein%20f%C3%BCr%20ein%20Make-up%20Coaching%20verschenken." target="_blank" rel="noopener noreferrer" class="btn btn-gold">Gutschein anfragen</a>
+    </div>
+  </section>
+
   <!-- ─── FAQ ─── -->
   <section class="section" id="faq">
     <div class="container">
@@ -254,6 +268,14 @@ const coachingSchema = {
     max-width: none;
   }
 
+  .gift-title {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 400;
+    margin: 0.5rem 0 1.25rem;
+  }
+  .gift-section .label { color: var(--color-gold); }
   .formats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
